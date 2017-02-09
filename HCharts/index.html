@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Verdana, sans-serif;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container" style="height: 400px"></div>
+<div id="drag"></div>
+
+<script src="../Assets/js/jquery-1.11.1.min.js"></script>
+<script src="code/highcharts.js"></script>
+<script src="code/plugin/draggable-points.js"></script>
+<script>
+
+    var test = [];
+    for(var i = 0 ; i < 12; i++){
+        test.push(i*100);
+    }
+
+
+    var chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',
+            animation: false
+        },
+
+        title: {
+            text: 'Highcharts draggable points demo'
+        },
+
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+
+        plotOptions: {
+            series: {
+                point: {
+                    events: {
+
+                        drag: function (e) {
+                            // Returning false stops the drag and drops. Example:
+                            /*
+                             if (e.newY > 300) {
+                             this.y = 300;
+                             return false;
+                             }
+                             */
+
+                            show();
+                        },
+                        drop: function () {
+                        }
+                    }
+                },
+                stickyTracking: false
+            },
+            column: {
+                stacking: 'normal'
+            },
+            line: {
+                cursor: 'ns-resize'
+            }
+        },
+
+        tooltip: {
+            yDecimals: 2
+        },
+
+        series: [{
+            data: test,
+            draggableY: true
+        }]
+
+    });
+
+var show = function () {
+    var newHtml = "";
+   var test2 = $("#container").highcharts();
+   if(test2.series.length > 0 && test2.series[0].data != undefined){
+       for(var i = 0; i < test2.series[0].data.length; i++){
+           var data = test2.series[0].data[i];
+           newHtml+="<p>"+ data.category+" = "+ data.y +" </p>";
+       }
+   }
+   $("#drag").html(newHtml);
+}
+
+</script>
+</body>
+</html>
