@@ -21,6 +21,9 @@ window.onload = function () {
             if(dragging){
                 var loc = canvasByWindowPoint(e.clientX,e.clientY);
                 context.save();
+                context.lineWidth = 30;
+                context.lineCap = "round";
+                context.lineJoin = "round";
                 context.beginPath();
                 context.moveTo(downLoc.x,downLoc.y);
                 context.lineTo(loc.x,loc.y);
