@@ -82,25 +82,20 @@ var minV = 0.1,maxV = 10,minLineWidth = 10,maxLineWidth = 30;
 var setDrawPenLineWidth = function (beginPoint,endPoint,time) {
     var s  = Math.floor(Math.sqrt(Math.pow(endPoint.x - beginPoint.x,2) + Math.pow(endPoint.y - beginPoint.y,2))),
         v = s / time,
-        lineWhite = 0;
-    console.log(v);
-
-
-    // if(v <= minV){
-    //     lineWhite = maxLineWidth
-    // }else if(v >= maxV){
-    //     lineWhite = minLineWidth;
-    // }else{
-    //     lineWhite = maxLineWidth - ( v - minV ) / ( maxV - minV ) * ( maxLineWidth - minLineWidth );
-    // }
-    // if(curLineWidth == -1){
-    //     return lineWhite
-    // }else{
-    //     return curLineWidth * 4 / 5 + lineWhite * 1 / 5;
-    // }
+        linWidth = 0;
+    if(v <=  minV){
+        linWidth =  maxLineWidth;
+    }else if(v >= maxV){
+        linWidth =  minLineWidth;
+    }else{
+        linWidth =  maxLineWidth - ( v - minV) /( maxV - minV) *(maxLineWidth - minLineWidth);
+    }
+    if(curLineWidth === -1){
+        return linWidth;
+    }else{
+        return curLineWidth * 4/5 + linWidth * 1/5;
+    }
 }
-
-
 
 //获取鼠标在canvas中的真实坐标
 var canvasByWindowPoint = function ( clientX,clientY) {
