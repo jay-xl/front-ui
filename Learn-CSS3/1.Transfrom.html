@@ -8,17 +8,117 @@
         .panel{
             margin-top: 20px;
         }
+        .panel-body{
+            perspective:800px ;
+        }
+        .section-span{
+            display: block;
+            float: left;
+            margin:10px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font-size: 22px;
+            line-height: 200px;
+            background: lightgrey;
+        }
+        .rangeGroup{
+            margin: 20px 10px;
+            clear: both;
+        }
+        .btn-group{
+            margin: 10px 0;
+        }
+        .form-group label{
+            text-align: right;
+        }
     </style>
+    <script src="../Assets/js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Transfrom 属性使用</h1>
-        <div class="panel panel-default">
-            <div class="panel-heading">Translate</div>
-            <div class="panel-body">
-                fdsafs
+        <div class="alert alert-info"> perspective 属性用于激活3D空间，其子元素都会获得透视效果，值越小3D效果越明显</div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Translate 定义位置的移动距离</div>
+            <div class="panel-body" id="translate">
+                <span class="section-span">
+                    <b id="translateTypeInfo"></b>
+                </span>
+                <div class="rangeGroup">
+                    <div class="btn-group" id="translateType">
+                        <button type="button" class="btn btn-default btn-primary">translate(x,y)</button>
+                        <button type="button" class="btn btn-default">translateX(x)</button>
+                        <button type="button" class="btn btn-default">translateY(y)</button>
+                        <button type="button" class="btn btn-default">translateZ(z)</button>
+                        <button type="button" class="btn btn-default">translate3d(x,y,z)</button>
+                    </div>
+                    <div class="well form-horizontal">
+                        <div class="form-group">
+                            <label for="translateX" class="col-sm-1">X:</label>
+                            <div class="col-sm-10">
+                                <input type="range" id="translateX" value="0" max="800" min="0" step="10" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="translateY" class="col-sm-1">Y:</label>
+                            <div class="col-sm-10">
+                                <input type="range" id="translateY" value="0" max="800" min="0" step="10" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="translateZ" class="col-sm-1">Z:</label>
+                            <div class="col-sm-10">
+                                <input type="range" id="translateZ" value="0" max="800" min="0" step="10" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        $(function () {
+            checkedType("translateType");
+            rangeChange("translateX","translateY","translateZ","translateType",function (rangeValue,styleType) {
+                var translate = styleType.replace("x",rangeValue.x+"px").replace("y",rangeValue.y+"px").replace("z",rangeValue.z+"px");
+                $("#translateTypeInfo").text(translate);
+                $("#translate span").css("transform",translate);
+            });
+        });
+        var checkedType = function (id) {
+            var $typeGroup = $("#" + id), $typeInfo = $("#" + id + "Info");
+            $typeInfo.text($typeGroup.find("button.btn-primary").text());
+            $typeGroup.children("button:button").on("click", function () {
+                var index = $(this).index();
+                $typeInfo.text($(this).text());
+                $typeGroup.children("button:button").removeClass("btn-primary").eq(index).addClass("btn-primary");
+            });
+        }
+        
+        var rangeChange = function (x,y,z,typeId,actionFunc) {
+            $("#"+x)[0].oninput = $("#"+y)[0].oninput = $("#"+z)[0].oninput =function () {
+                var rangeValue = {
+                    x:$("#"+x).val(),
+                    y : $("#"+y).val(),
+                    z : $("#"+z).val()
+                },
+                    $this = $(this);
+                switch ($this.attr("id")){
+                    case x:
+                        rangeValue.x =$this.val();
+                        break;
+                    case y:
+                        rangeValue.y =$this.val();
+                        break;
+                    case z:
+                        rangeValue.z =$this.val();
+                        break;
+                }
+                var styleType = $("#"+typeId).find("button.btn-primary").text();
+                actionFunc(rangeValue,styleType);
+            }
+        }
+    </script>
 </body>
 </html>
