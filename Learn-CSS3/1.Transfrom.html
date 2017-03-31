@@ -2,166 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS3 Transfrom属性</title>
-    <link rel="stylesheet" href="../Assets/css/bootstrap/bootstrap.min.css">
+    <title>CSS3 Transfrom 实现立方体</title>
     <style>
-        .panel{
-            margin-top: 20px;
+        .wrap {
+            margin-top: 200px;
+            perspective: 800px;
+            perspective-origin: 50% 100px;
         }
-        .panel-body{
-            perspective:800px ;
+        .cube {
+            margin: 0 auto;
+            position: relative;
+            width: 200px;
+            top: 30px;
+            transform-style: preserve-3d;
+            animation: rotate-frame 10s infinite linear;
         }
-        .section-span{
-            display: block;
-            float: left;
-            margin:10px;
+        .cube div {
+            position: absolute;
             width: 200px;
             height: 200px;
+            border: solid 1px red;
             text-align: center;
             font-size: 22px;
-            line-height: 200px;
-            background: lightgrey;
+            line-height:200px ;
         }
-        .rangeGroup{
-            margin: 20px 10px;
-            clear: both;
+        .back {
+            transform: translateZ(-100px);
         }
-        .btn-group{
-            margin: 10px 0;
+
+        .front{
+            transform: translateZ(100px);
         }
-        .form-group label{
-            text-align: right;
+
+        .top{
+            transform: rotateX(-90deg) translateY(-100px);
+            transform-origin: top center;
         }
-    </style>
-    <script src="../Assets/js/jquery-1.11.1.min.js"></script>
-</head>
-<body>
-    <div class="container">
-        <h1>Transfrom 属性使用</h1>
-        <div class="alert alert-info"> perspective 属性用于激活3D空间，其子元素都会获得透视效果，值越小3D效果越明显</div>
-        <div class="panel panel-info">
-            <div class="panel-heading">Translate 定义位置的移动距离</div>
-            <div class="panel-body" id="translate">
-                <span class="section-span">
-                    <b id="translateTypeInfo"></b>
-                </span>
-                <div class="rangeGroup">
-                    <div class="btn-group" id="translateType">
-                        <button type="button" class="btn btn-default btn-primary">translate(x,y)</button>
-                        <button type="button" class="btn btn-default">translateX(x)</button>
-                        <button type="button" class="btn btn-default">translateY(y)</button>
-                        <button type="button" class="btn btn-default">translateZ(z)</button>
-                        <button type="button" class="btn btn-default">translate3d(x,y,z)</button>
-                    </div>
-                    <div class="well form-horizontal">
-                        <div class="form-group">
-                            <label for="translateX" class="col-sm-1">X:</label>
-                            <div class="col-sm-10">
-                                <input type="range" id="translateX" value="0" max="300" min="-300" step="10" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="translateY" class="col-sm-1">Y:</label>
-                            <div class="col-sm-10">
-                                <input type="range" id="translateY" value="0" max="300" min="-300" step="10" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="translateZ" class="col-sm-1">Z:</label>
-                            <div class="col-sm-10">
-                                <input type="range" id="translateZ" value="0" max="300" min="-300" step="10" >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="panel panel-info">
-            <div class="panel-heading">Scale 定义元素的缩放比例</div>
-            <div class="panel-body" id="scale">
-                 <span class="section-span">
-                    <b id="scaleTypeInfo"></b>
-                </span>
-                <div class="rangeGroup">
-                    <div class="btn-group" id="scaleType">
-                        <button type="button" class="btn btn-default btn-primary">scale(x,y)</button>
-                        <button type="button" class="btn btn-default">scaleX(x)</button>
-                        <button type="button" class="btn btn-default">scaleY(y)</button>
-                        <button type="button" class="btn btn-default">scaleZ(z)</button>
-                        <button type="button" class="btn btn-default">scale3d(x,y,z)</button>
-                    </div>
-                    <div class="well form-horizontal">
-                        <div class="form-group">
-                            <label for="scaleX" class="col-sm-1">X:</label>
-                            <div class="col-sm-10">
-                                <input type="range" id="scaleX" value="0" max="10" min="-10" step="1" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="scaleY" class="col-sm-1">Y:</label>
-                            <div class="col-sm-10">
-                                <input type="range" id="scaleY" value="0" max="10" min="-10" step="1" >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="scaleZ" class="col-sm-1">Z:</label>
-                            <div class="col-sm-10">
-                                <input type="range" id="scaleZ" value="0" max="10" min="-10" step="1" >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        $(function () {
-            checkedType("translateType");
-            rangeChange("translateX","translateY","translateZ","translateType",function (rangeValue,styleType) {
-                var translate = styleType.replace("x",rangeValue.x+"px").replace("y",rangeValue.y+"px").replace("z",rangeValue.z+"px");
-                $("#translateTypeInfo").text(translate);
-                $("#translate span").css("transform",translate);
-            });
-            checkedType("scaleType");
-            rangeChange("scaleX","scaleY","scaleZ","scaleType",function (rangeValue,styleType) {
-                var scale = styleType.replace("x",rangeValue.x).replace("y",rangeValue.y).replace("z",rangeValue.z);
-                $("#scaleTypeInfo").text(scale);
-                $("#scale span").css("transform",scale);
-            });
-        });
-        var checkedType = function (id) {
-            var $typeGroup = $("#" + id), $typeInfo = $("#" + id + "Info");
-            $typeInfo.text($typeGroup.find("button.btn-primary").text());
-            $typeGroup.children("button:button").on("click", function () {
-                var index = $(this).index();
-                $typeInfo.text($(this).text());
-                $typeGroup.children("button:button").removeClass("btn-primary").eq(index).addClass("btn-primary");
-            });
+        .bottom{
+            transform:rotateX(-90deg) translateY(100px);
+            transform-origin: bottom center;
         }
-        var rangeChange = function (x,y,z,typeId,actionFunc) {
-            $("#"+x)[0].oninput = $("#"+y)[0].oninput = $("#"+z)[0].oninput =function () {
-                var rangeValue = {
-                    x:$("#"+x).val(),
-                    y : $("#"+y).val(),
-                    z : $("#"+z).val()
-                },
-                    $this = $(this);
-                switch ($this.attr("id")){
-                    case x:
-                        rangeValue.x =$this.val();
-                        break;
-                    case y:
-                        rangeValue.y =$this.val();
-                        break;
-                    case z:
-                        rangeValue.z =$this.val();
-                        break;
-                }
-                var styleType = $("#"+typeId).find("button.btn-primary").text();
-                actionFunc(rangeValue,styleType);
+        .left{
+            transform:rotateY(270deg) translateX(-100px);
+            transform-origin: left center;
+        }
+        .right{
+            transform:rotateY(270deg) translateX(100px);
+            transform-origin: right center;
+        }
+
+        @keyframes rotate-frame {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            10% {
+                transform: rotateX(0deg) rotateY(180deg);
+            }
+            20% {
+                transform: rotateX(-180deg) rotateY(180deg);
+            }
+            30% {
+                transform: rotateX(-360deg) rotateY(180deg);
+            }
+            40% {
+                transform: rotateX(-360deg) rotateY(360deg);
+            }
+            50% {
+                transform: rotateX(-180deg) rotateY(360deg);
+            }
+            60% {
+                transform: rotateX(90deg) rotateY(180deg);
+            }
+            70% {
+                transform: rotateX(0) rotateY(180deg);
+            }
+            80% {
+                transform: rotateX(90deg) rotateY(90deg);
+            }
+            90% {
+                transform: rotateX(90deg) rotateY(0);
+            }
+            100% {
+                transform: rotateX(0) rotateY(0);
             }
         }
-    </script>
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="cube">
+            <div class="front">前</div>
+            <div class="back">后</div>
+            <div class="top">上</div>
+            <div class="bottom">下</div>
+            <div class="left">左</div>
+            <div class="right">右</div>
+        </div>
+    </div>
 </body>
 </html>
