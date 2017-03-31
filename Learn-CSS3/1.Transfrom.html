@@ -57,19 +57,57 @@
                         <div class="form-group">
                             <label for="translateX" class="col-sm-1">X:</label>
                             <div class="col-sm-10">
-                                <input type="range" id="translateX" value="0" max="800" min="0" step="10" >
+                                <input type="range" id="translateX" value="0" max="300" min="-300" step="10" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="translateY" class="col-sm-1">Y:</label>
                             <div class="col-sm-10">
-                                <input type="range" id="translateY" value="0" max="800" min="0" step="10" >
+                                <input type="range" id="translateY" value="0" max="300" min="-300" step="10" >
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="translateZ" class="col-sm-1">Z:</label>
                             <div class="col-sm-10">
-                                <input type="range" id="translateZ" value="0" max="800" min="0" step="10" >
+                                <input type="range" id="translateZ" value="0" max="300" min="-300" step="10" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-info">
+            <div class="panel-heading">Scale 定义元素的缩放比例</div>
+            <div class="panel-body" id="scale">
+                 <span class="section-span">
+                    <b id="scaleTypeInfo"></b>
+                </span>
+                <div class="rangeGroup">
+                    <div class="btn-group" id="scaleType">
+                        <button type="button" class="btn btn-default btn-primary">scale(x,y)</button>
+                        <button type="button" class="btn btn-default">scaleX(x)</button>
+                        <button type="button" class="btn btn-default">scaleY(y)</button>
+                        <button type="button" class="btn btn-default">scaleZ(z)</button>
+                        <button type="button" class="btn btn-default">scale3d(x,y,z)</button>
+                    </div>
+                    <div class="well form-horizontal">
+                        <div class="form-group">
+                            <label for="scaleX" class="col-sm-1">X:</label>
+                            <div class="col-sm-10">
+                                <input type="range" id="scaleX" value="0" max="10" min="-10" step="1" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="scaleY" class="col-sm-1">Y:</label>
+                            <div class="col-sm-10">
+                                <input type="range" id="scaleY" value="0" max="10" min="-10" step="1" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="scaleZ" class="col-sm-1">Z:</label>
+                            <div class="col-sm-10">
+                                <input type="range" id="scaleZ" value="0" max="10" min="-10" step="1" >
                             </div>
                         </div>
                     </div>
@@ -85,6 +123,12 @@
                 $("#translateTypeInfo").text(translate);
                 $("#translate span").css("transform",translate);
             });
+            checkedType("scaleType");
+            rangeChange("scaleX","scaleY","scaleZ","scaleType",function (rangeValue,styleType) {
+                var scale = styleType.replace("x",rangeValue.x).replace("y",rangeValue.y).replace("z",rangeValue.z);
+                $("#scaleTypeInfo").text(scale);
+                $("#scale span").css("transform",scale);
+            });
         });
         var checkedType = function (id) {
             var $typeGroup = $("#" + id), $typeInfo = $("#" + id + "Info");
@@ -95,7 +139,6 @@
                 $typeGroup.children("button:button").removeClass("btn-primary").eq(index).addClass("btn-primary");
             });
         }
-        
         var rangeChange = function (x,y,z,typeId,actionFunc) {
             $("#"+x)[0].oninput = $("#"+y)[0].oninput = $("#"+z)[0].oninput =function () {
                 var rangeValue = {
