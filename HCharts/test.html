@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../Assets/js/jquery-1.11.1.min.js"></script>
+    <script src="code/highcharts.js"></script>
+    <script src="code/plugin/drag-plugin.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 800px;height: 400px;"></div>
+<script>
+    $(function () {
+        chartInit();
+    });
+    var chartInit = function () {
+        var chart = Highcharts.chart({
+            chart: {
+                renderTo : "container",
+                animation : false
+            },
+
+            title: {
+                text: 'Highcharts draggable points demo'
+            },
+            exporting : {
+                scale : 1
+            },
+            plotOptions : {
+                series : {
+                    marker : {
+                        enabled : false
+                    },
+                    connectNulls : true,
+                    turboThreshold : 1000000,
+                    point : {
+                        events : {
+                            drag : function(e) {
+                                console.log(e);
+                                var de_x = e.x - e.target.x;
+                                var de_y = e.y - e.target.y;
+                                var serLength = this.series.data.length;
+                                for (var i = 0; i < serLength; i++) {
+                                    this.series.points[i].x += de_x;
+                                    this.series.points[i].y += de_y;
+                                }
+                            }
+                        }
+                    },
+                    stickyTracking : false
+                }
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            series: [{
+                data: [111,22,11,3,1],
+                draggableY: true,
+                draggableX:true
+            }]
+        });
+    }
+
+</script>
+</body>
+</html>

@@ -17,11 +17,12 @@
 
 <script src="../Assets/js/jquery-1.11.1.min.js"></script>
 <script src="code/highcharts.js"></script>
-<script src="code/plugin/draggable-points.js"></script>
+<!--<script src="code/plugin/draggable-points.js"></script>-->
+<script src="code/plugin/drag-plugin.js"></script>
 <script>
 
     var test = [];
-    for(var i = 0 ; i < 12; i++){
+    for(var i = 0 ; i < 10; i++){
         test.push(i*100);
     }
 
@@ -39,37 +40,35 @@
         xAxis: {
             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         },
+            plotOptions: {
+                series: {
+                    point: {
+                        events: {
 
-        plotOptions: {
-            series: {
-                point: {
-                    events: {
+                            drag: function (e) {
+                                // Returning false stops the drag and drops. Example:
+                                /*
+                                 if (e.newY > 300) {
+                                 this.y = 300;
+                                 return false;
+                                 }
+                                 */
 
-                        drag: function (e) {
-                            // Returning false stops the drag and drops. Example:
-                            /*
-                             if (e.newY > 300) {
-                             this.y = 300;
-                             return false;
-                             }
-                             */
-
-                            show();
-                        },
-                        drop: function () {
+                                show();
+                            },
+                            drop: function () {
+                            }
                         }
-                    }
+                    },
+                    stickyTracking: true
                 },
-                stickyTracking: false
-            },
-            column: {
+                column: {
                 stacking: 'normal'
             },
             line: {
                 cursor: 'ns-resize'
             }
         },
-
         tooltip: {
             yDecimals: 2
         },
