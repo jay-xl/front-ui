@@ -12,6 +12,16 @@
 
 # Canvas
 
+ 1. 学写一个字
+ 2. Love
+ 3. Happy Valentine's Day
+ 4. 粒子旋风
+ 5. 粒子引擎
+ 6. UI3D
+ 7. ASCII艺术
+ 8. Hex
+ 9. Particle Animation
+
 
 # HTML5
 
