@@ -13,23 +13,4 @@
 # Canvas
 
  1. 学写一个字
- ![学写一个字](http://img.blog.csdn.net/20170605154554394?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
- 2. Love
- 
- ![Love](http://img.blog.csdn.net/20170605152734775?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
- 3. Happy Valentine's Day
-
- 4. 粒子旋风
-
- 5. 粒子引擎
-
- 6. UI3D
- 7. ASCII艺术
- 8. Hex
- 9. Particle Animation
-
-
-# HTML5
-
+ ![学写一个字](http://img.blog.csdn.net/20170605152406321?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
