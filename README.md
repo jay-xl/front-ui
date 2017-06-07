@@ -1,6 +1,6 @@
 > 用于积累一些前端特效，持续更新
 
-> 喜欢的话就不要吝啬，给个 Star 吧
+> 总能找到你需要的特效,喜欢的话就不要吝啬，给个 Star 吧
 
 # 目录结构
 * Assets 用于存储公用图片、css 样式及 js 文件
@@ -13,10 +13,9 @@
 # Canvas
 
  1. 学写一个字
- ![学写一个字](http://img.blog.csdn.net/20170605154554394?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+ ![学写一个字](http://img.blog.csdn.net/20170605152406321?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
  2. Love
- 
  ![Love](http://img.blog.csdn.net/20170605152734775?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
  3. Happy Valentine's Day
