@@ -50,7 +50,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 12.5rem;
-  magrin: 0;
+  margin: 0;
   padding: 1.5rem 3.125rem;
   background-color: #3498db;
   border: none;
@@ -162,19 +162,19 @@ body {
     </button>
     <script>
         const button = document.querySelector('.button');
-const submit = document.querySelector('.submit');
+        const submit = document.querySelector('.submit');
 
-function toggleClass() {
-	this.classList.toggle('active');
-}
+        function toggleClass() {
+            this.classList.toggle('active');
+        }
 
-function addClass() {
-	this.classList.add('finished');
-}
+        function addClass() {
+            this.classList.add('finished');
+        }
 
-button.addEventListener('click', toggleClass);
-button.addEventListener('transitionend', toggleClass);
-button.addEventListener('transitionend', addClass);
+        button.addEventListener('click', toggleClass);
+        button.addEventListener('transitionend', toggleClass);
+        button.addEventListener('transitionend', addClass);
     </script>
 </body>
 </html>
