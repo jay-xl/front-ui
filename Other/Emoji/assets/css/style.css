@@ -137,3 +137,21 @@ div[class^='emoji-']::before,div[class^='emoji-']::after{
         transform: scale(0.5);
     }
 }
+
+/*========= emoji style by Haha  ===========*/
+.emoji-haha:after{
+    content: "Haha";
+}
+
+/*============= emoji style by emoji-se ============*/
+.emoji-se:after{
+    content: "Se";
+}
+
+/*============= emoji style by emoji-badSmail ============*/
+.emoji-badSmail::after{
+    content: 'Bad Smail';
+    width: 127px;
+    text-align: center;
+    left:0;
+}
