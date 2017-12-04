@@ -15,9 +15,6 @@
 1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Canvas/Writing/index.html)
 
 ### Component
-
-
 ### UI
-
 ### Other
-1. [Emoji]()
+1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Other/Emoji/index.html)
