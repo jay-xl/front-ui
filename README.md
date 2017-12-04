@@ -3,9 +3,21 @@
 
 > 译：用于积累一些前端特效，持续更新。总能找到你需要的特效,喜欢的话就不要吝啬，给个 Star 吧！
 
-![background Image](https://github.com/SilenceHVK/Articles/raw/master/assets/images/bgImages/bg2.jpg)
+![background Image](https://github.com/SilenceHVK/Articles/raw/master/assets/images/bgImages/bg1.jpg)
 
 # Directory（目录）
 - [Canvas](#canvas)
 - [Component](#component)
 - [UI](#ui)
+- [Other](#other)
+
+### Canvas
+1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Canvas/Writing/index.html)
+
+### Component
+
+
+### UI
+
+### Other
+1. [Emoji]()
