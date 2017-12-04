@@ -97,3 +97,43 @@ div[class^='emoji-']::before,div[class^='emoji-']::after{
         transform: rotate(5deg);
     }
 }
+
+/*========= emoji style by Love  ===========*/
+.emoji-love{
+    background: #F55064;
+}
+.emoji-love:after{
+    content: "Love";
+}
+.emoji-love > div.emoji-heart{
+    top: calc(50% - 35px);
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    animation: heart-beat 2s linear infinite;
+}
+.emoji-love > div.emoji-heart::before,.emoji-love > div.emoji-heart::after{
+    top: calc(50% - 30px);
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 65px;
+    background: #FFF;
+    border-radius: 20px 20px 0 0;
+}
+.emoji-love > div.emoji-heart::before{
+    transform: translate(20px) rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.emoji-love > div.emoji-heart::after{
+    transform: translate(-20px) rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes heart-beat {
+    20%{
+        transform: scale(1.1);
+    }
+    70%{
+        transform: scale(0.5);
+    }
+}
