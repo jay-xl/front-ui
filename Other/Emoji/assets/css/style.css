@@ -237,12 +237,93 @@ div[class^='emoji-']::before,div[class^='emoji-']::after{
         top: 50%;
     }
 }
-
-
-/*============= emoji style by emoji-se ============*/
-.emoji-se:after{
-    content: "Se";
+/*============= emoji style by emoji-heartEyes ============*/
+.emoji-heartEyes:after{
+    content: "Heart Eyes";
+    width: 127px;
+    text-align: center;
+    left:0;
 }
+.emoji-heartEyes div.emoji-eye{
+    top: calc(50% - 40px);
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    animation: eyes-beat 1s linear infinite;
+}
+.emoji-heartEyes div.emoji-eye:nth-child(1){
+    left: calc(50%)
+}
+.emoji-heartEyes div.emoji-eye:before,
+.emoji-heartEyes div.emoji-eye:after{
+    width: 20px;
+    height: 30px;
+    border-radius: 40px 40px 0 0;
+    background: red;
+}
+.emoji-heartEyes div.emoji-eye:before{
+    transform: translate(-2px) rotate(45deg);
+    transform-origin: 0 100%;
+ }
+.emoji-heartEyes div.emoji-eye:after{
+    transform: translate(5px) rotate(-45deg);
+    transform-origin: 100% 100%;
+}
+@keyframes eyes-beat {
+    50%{
+        transform: scale(1.3);
+    }
+}
+.emoji-heartEyes div.emoji-mouth{
+    top:calc(50% + 15px);
+    left:calc(50% - 40px);
+    width: 80px;
+    height: 40px;
+    background: #000;
+    border-radius: 0 0 40px 40px;
+}
+.emoji-heartEyes div.emoji-mouth:after{
+    left: calc(50% + 28px);
+    top:10px;
+    width: 15px;
+    height: 15px;
+    background: #548DFF;
+    border-radius: 0 100% 40% 50% / 0 50% 40% 100%;
+    animation: tear-drop 2s linear infinite;
+}
+@keyframes tear-drop {
+    0%, 100% {
+        top: 5px;
+        transform: rotate(45deg) scale(0);
+    }
+    25% {
+        transform: rotate(45deg) scale(1);
+    }
+    49.9% {
+        top: 15px;
+        transform: rotate(45deg) scale(0);
+    }
+    50% {
+        top: 20px;
+        transform: rotate(45deg) scale(0);
+    }
+    75% {
+        transform: rotate(45deg) scale(1);
+    }
+    99.9% {
+        top: 35px;
+        transform: rotate(45deg) scale(0);
+    }
+}
+.emoji-heartEyes div.emoji-tongue{
+    margin-left: 4px;
+    width: 70px;
+    height: 30px;
+    background: #F55064;
+    border-radius: 50%;
+}
+
+
 /*============= emoji style by emoji-badSmail ============*/
 .emoji-badSmail::after{
     content: 'Bad Smail';
