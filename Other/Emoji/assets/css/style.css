@@ -143,11 +143,11 @@ div[class^='emoji-']::before,div[class^='emoji-']::after{
     content: "Haha";
 }
 
+
 /*============= emoji style by emoji-se ============*/
 .emoji-se:after{
     content: "Se";
 }
-
 /*============= emoji style by emoji-badSmail ============*/
 .emoji-badSmail::after{
     content: 'Bad Smail';
