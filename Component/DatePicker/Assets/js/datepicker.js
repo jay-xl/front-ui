@@ -12,32 +12,32 @@
             year = today.getFullYear();
             month = today.getMonth() + 1;
         }
+        month -= 1;
+
         //获取传入月份的第一天
+        var firstDateOfMonth = new Date(year,month,1);
+        //获取传入月份的第一天是星期几
+        var firstDayOfMonth = firstDateOfMonth.getDay();
+        
+        //获取传入月份的最后一天
+        var lastDateOfMonth = new Date(year,month + 1,0);
+        var lastDayOfMonth = lastDateOfMonth.getDay();
+        
+        //判断第一天是否为星期日
+        var beginDate = firstDayOfMonth === 0 ? firstDateOfMonth : new Date(firstDateOfMonth.setDate(1 - firstDayOfMonth));
+        //判断最后一天是否为星期六
+        var endDate = lastDayOfMonth === 6 ? lastDateOfMonth : new Date(lastDateOfMonth.setDate(lastDateOfMonth.getDate() + (6 -  lastDayOfMonth)));
 
-        // while(){}
-
-
-        //获取一个月的第一天
-        // var firstDay = new Date(year,month - 1,1);
-        // //获取一个月当天是星期几
-        // var firstDayWeekDay = firstDay.getDay();
-
-        // console.log(firstDayWeekDay)
-
-        //获取上月的最后一天
-        // var lastDayOfLastMonth = new Date(year,month - 1,0);
-        // //获获取上月的最后一天是星期几
-        // var lastDayWeekDayOfLastMonth = lastDayOfLastMonth.getDay();
-        // //显示上月剩余的总天数
-        // var preMonthDayCount = firstDayWeekDay - 1;
-
-        // //获取一个月的最后一天
-        // var lastDay = new Date(year,month,0);
-        // //获取一个月的最后一天是星期几
-        // var lastDayWeekDay = lastDay.getDate();
-
+        //循环获取日期
+        while(beginDate.getTime() <= endDate.getTime()){
+            result.push({
+                month:beginDate.getMonth() + 1,
+                day : beginDate.getDate(),
+                week : beginDate.getDay()
+            });
+            beginDate = new Date(beginDate.setDate(beginDate.getDate() + 1));
+        }  
+        return result;
     };
-
-
     window.datepicker = datepicker;
 })()
