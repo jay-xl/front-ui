@@ -21,6 +21,10 @@ body {
     left: calc(50% - 30px);
     color: #8A8A8A;
 }
+.emoji-face{
+    width: inherit;
+    height: inherit;
+}
 div[class^='emoji-']{
     position: absolute
 }
@@ -142,6 +146,97 @@ div[class^='emoji-']::before,div[class^='emoji-']::after{
 .emoji-haha:after{
     content: "Haha";
 }
+.emoji-haha > div.emoji-face{
+    animation: haha-face 2s linear infinite;
+}
+.emoji-haha div.emoji-eyes{
+    width: 26px;
+    height: 6px;
+    border-radius: 2px;
+    left: calc(50% - 13px);
+    top: 35px;
+    transform: rotate(20deg);
+    background: transparent;
+    box-shadow: -25px 5px 0 0 #000,
+                 25px -5px 0 0 #000;
+}
+.emoji-haha div.emoji-eyes:after {
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 6px;
+    border-radius: 2px;
+    transform: rotate(-40deg);
+    background: transparent;
+    box-shadow: -25px -5px 0 0 #000,
+                 25px 5px 0 0 #000; 
+}
+.emoji-haha div.emoji-mouth{
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: calc(50% - 40px);
+    background: #000;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    z-index: 1;
+    animation: haha-mouth 2s linear infinite;
+}
+.emoji-haha div.emoji-tongue{
+    width: 70px;
+    height: 30px;
+    background: #F55064;
+    border-radius: 50%;
+}
+@keyframes haha-face{
+    10%{ transform: translateY(25px); }
+    20%{ transform: translateY(15px); }
+    30%{ transform: translateY(25px); }
+    40%{ transform: translateY(15px); }
+    50%{ transform: translateY(25px); }
+    60%{ transform: translateY(0); }
+    70%{ transform: translateY(-10px); }
+    80%{ transform: translateY(0); }
+    90%{ transform: translateY(-10px); }
+}
+@keyframes haha-mouth {
+    10% {
+        transform: scale(0.6);
+        top: 45%;
+    }
+    20% {
+        transform: scale(0.8);
+        top: 45%;
+    }
+    30% {
+        transform: scale(0.6);
+        top: 45%;
+    }
+    40% {
+        transform: scale(0.8);
+        top: 45%;
+    }
+    50% {
+        transform: scale(0.6);
+        top: 45%;
+    }
+    60% {
+        transform: scale(1);
+        top: 50%;
+    }
+    70% {
+        transform: scale(1.2);
+        top: 50%;
+    }
+    80% {
+        transform: scale(1);
+        top: 50%;
+    }
+    90% {
+        transform: scale(1.1);
+        top: 50%;
+    }
+}
 
 
 /*============= emoji style by emoji-se ============*/
@@ -155,3 +250,4 @@ div[class^='emoji-']::before,div[class^='emoji-']::after{
     text-align: center;
     left:0;
 }
+
