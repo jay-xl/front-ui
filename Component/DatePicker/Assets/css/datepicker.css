@@ -6,7 +6,7 @@
     display: none;
 }
 .ui-datepicker-wrapper-show{
-    display: show;
+    display: block;
 }
 .ui-datepicker-wrapper .ui-datepicker-header{
     padding: 0 20px;

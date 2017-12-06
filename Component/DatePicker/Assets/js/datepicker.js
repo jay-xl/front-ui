@@ -84,15 +84,32 @@
     }
 
     /**
-     * 
+     * datepicker 初始化
      * @param {Object} input
      */
     datepicker.init = function(input){
+        var $input = document.querySelector(input);
         var html = datepicker.buildUi();
         var $wrapper = document.createElement('div');
         $wrapper.className = 'ui-datepicker-wrapper';
+        //动态设置日历宽度
+        $wrapper.style.width = $input.offsetWidth +"px";
         $wrapper.innerHTML = html;
         document.body.appendChild($wrapper);
+        
+        //绑定文本事件
+        $input.addEventListener('click',function(){
+            if($wrapper.classList.value.indexOf('ui-datepicker-wrapper-show') >= 0){
+                $wrapper.classList.remove('ui-datepicker-wrapper-show');
+            }else{
+                $wrapper.classList.add('ui-datepicker-wrapper-show');
+            }
+        },false);
+        $input.addEventListener('blur',function(){
+            if($wrapper.classList.value.indexOf('ui-datepicker-wrapper-show') >= 0){
+                $wrapper.classList.remove('ui-datepicker-wrapper-show');
+            }
+        },false);
     }
     window.datepicker = datepicker;
 })()
