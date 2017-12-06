@@ -85,7 +85,7 @@
 
     /**
      * datepicker 初始化
-     * @param {Object} input
+     * @param {String} input
      */
     datepicker.init = function(input){
         var $input = document.querySelector(input);
