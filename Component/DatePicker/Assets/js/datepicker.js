@@ -105,11 +105,6 @@
                 $wrapper.classList.add('ui-datepicker-wrapper-show');
             }
         },false);
-        $input.addEventListener('blur',function(){
-            if($wrapper.classList.value.indexOf('ui-datepicker-wrapper-show') >= 0){
-                $wrapper.classList.remove('ui-datepicker-wrapper-show');
-            }
-        },false);
     }
     window.datepicker = datepicker;
 })()
