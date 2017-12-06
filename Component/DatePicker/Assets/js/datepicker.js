@@ -39,5 +39,49 @@
         }  
         return result;
     };
-    window.datepicker = datepicker;
+
+    /**
+     * 渲染前台页面
+     * @param {Number} year 
+     * @param {Number} month 
+     */
+    datepicker.buildUi = function(el,year,month){
+        var theSelector = document.querySelector(el);
+        var dateArr = datepicker.getMonthData(year,month);
+        var newHTML = '<div class="ui-datepicker-wrapper">';
+            // 日历head
+            newHTML += '<div class="ui-datepicker-header">';
+                newHTML += '<a href="#" class="ui-datepicker-btn ui-datepicker-prv-btn">&lt;</a>';
+                newHTML += '<a href="#" class="ui-datepicker-btn ui-datepicker-next-btn">&gt;</a>';
+                newHTML += '<span class="ui-datepicker-curr-month">' + year + '-' + month + '</span>';
+            newHTML += '</div>';
+            //日历body
+            newHTML += '<div class="ui-datepicker-body">';
+                newHTML += '<table>';
+                    newHTML += '<thead>';
+                        newHTML += '<tr>';
+                            newHTML += '<th>日</th>';
+                            newHTML += '<th>一</th>';
+                            newHTML += '<th>二</th>';
+                            newHTML += '<th>三</th>';
+                            newHTML += '<th>四</th>';
+                            newHTML += '<th>五</th>';
+                            newHTML += '<th>六</th>';
+                        newHTML += '</tr>';
+                    newHTML += '</thead>';
+                    newHTML += '<tbody>';
+                    dateArr.map(function(item,index){
+                        if(item.week === 0) newHTML += '<tr>';
+                        newHTML += '<td>'+ item.day +'</td>';  
+                        if(item.week === 6) newHTML += '</tr>';    
+                    });
+                    newHTML += '</tbody>';
+                newHTML += '</table>';
+            newHTML += '</div>';
+        newHTML += '</div>';
+        theSelector.innerHTML = newHTML;
+    }
+    window.datepicker = {
+        bindPicker : datepicker.buildUi
+    }
 })()
