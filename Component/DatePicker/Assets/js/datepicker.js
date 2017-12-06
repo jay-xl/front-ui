@@ -37,7 +37,11 @@
             });
             beginDate = new Date(beginDate.setDate(beginDate.getDate() + 1));
         }  
-        return result;
+        return {
+            year : year,
+            month : month + 1,
+            result : result
+        };
     };
 
     /**
@@ -45,15 +49,13 @@
      * @param {Number} year 
      * @param {Number} month 
      */
-    datepicker.buildUi = function(el,year,month){
-        var theSelector = document.querySelector(el);
+    datepicker.buildUi = function(year,month){
         var dateArr = datepicker.getMonthData(year,month);
-        var newHTML = '<div class="ui-datepicker-wrapper">';
             // 日历head
-            newHTML += '<div class="ui-datepicker-header">';
+        var newHTML = '<div class="ui-datepicker-header">';
                 newHTML += '<a href="#" class="ui-datepicker-btn ui-datepicker-prv-btn">&lt;</a>';
                 newHTML += '<a href="#" class="ui-datepicker-btn ui-datepicker-next-btn">&gt;</a>';
-                newHTML += '<span class="ui-datepicker-curr-month">' + year + '-' + month + '</span>';
+                newHTML += '<span class="ui-datepicker-curr-month">' + dateArr.year + '-' + dateArr.month + '</span>';
             newHTML += '</div>';
             //日历body
             newHTML += '<div class="ui-datepicker-body">';
@@ -70,7 +72,7 @@
                         newHTML += '</tr>';
                     newHTML += '</thead>';
                     newHTML += '<tbody>';
-                    dateArr.map(function(item,index){
+                    dateArr.result.map(function(item,index){
                         if(item.week === 0) newHTML += '<tr>';
                         newHTML += '<td>'+ item.day +'</td>';  
                         if(item.week === 6) newHTML += '</tr>';    
@@ -78,10 +80,19 @@
                     newHTML += '</tbody>';
                 newHTML += '</table>';
             newHTML += '</div>';
-        newHTML += '</div>';
-        theSelector.innerHTML = newHTML;
+        return newHTML;
     }
-    window.datepicker = {
-        bindPicker : datepicker.buildUi
+
+    /**
+     * 
+     * @param {Object} input
+     */
+    datepicker.init = function(input){
+        var html = datepicker.buildUi();
+        var $wrapper = document.createElement('div');
+        $wrapper.className = 'ui-datepicker-wrapper';
+        $wrapper.innerHTML = html;
+        document.body.appendChild($wrapper);
     }
+    window.datepicker = datepicker;
 })()
