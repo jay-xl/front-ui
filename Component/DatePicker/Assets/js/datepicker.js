@@ -1,4 +1,5 @@
 (function(){
+    'use strict'
     var datepicker = {};
     /**
      * 获取月份数据
