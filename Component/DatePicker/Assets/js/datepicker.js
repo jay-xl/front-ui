@@ -101,7 +101,6 @@
         $wrapper.style.width = $input.offsetWidth +"px";
         $wrapper.innerHTML = html;
         document.body.appendChild($wrapper);
-        
         //绑定文本事件
         $input.addEventListener('click',function(){
             if($wrapper.classList.contains('ui-datepicker-wrapper-show')){
@@ -116,7 +115,6 @@
                 $wrapper.style.top = height + top + 2 + 'px';
             }
         },false);
-        
         //绑定日历点击事件
         $wrapper.addEventListener('click',function(e){
             var target = e.target;
