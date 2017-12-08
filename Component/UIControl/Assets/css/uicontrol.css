@@ -12,12 +12,56 @@
 * The default values for the .ui-button class
 */
 .ui-button{
+    color: #AAA;
+    background: #FFF;
+    background-image: none;
+    font-weight: 300px;
+    font-size: 16px;
+    white-space: nowrap;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin-bottom: 3px;
+    padding: 10px 30px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
     display: inline-block;
+    appearance: none !important;
+    border:solid 1px #EEE;
     cursor: pointer;
+    outline: none !important;
+    user-select: none;
 }
-.ui-button:visited{}
-.ui-button:focus,.ui-button:hover{}
-.ui-button-primary{}
-.ui-button-success{}
-.ui-button-failure{}
-.ui-button-warning{}
+.ui-button-disabled{
+    background-color: #EEE;
+    border-color: #EEE;
+    appearance: none !important;
+    cursor: not-allowed;
+}
+.ui-button-primary{
+    background-color: #1B9AF7;
+    border-color: #1B9AF7;
+    color: #FFF;
+}
+.ui-button-success{
+    background-color: #1ABC9C;
+    border-color: #1ABC9C;
+    color: #FFF; 
+}
+.ui-button-failure{
+    background-color: #ED1941;
+    border-color: #ED1941;
+    color: #FFF;
+}
+.ui-button-warning{
+    background-color: #FEAE1B;
+    border-color: #FEAE1B;
+    color: #FFF; 
+}
+.ui-button-info{
+    background-color: #B5D1D8;
+    border-color: #B5D1D8;
+    color: #FFF; 
+}
+.ui-button-lg{width: 100%;}
+.ui-button-transparent{background-color: transparent; color: #AAA;}
+.ui-button-circle {border-radius: 100%; }
