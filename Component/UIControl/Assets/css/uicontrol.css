@@ -12,56 +12,98 @@
 * The default values for the .ui-button class
 */
 .ui-button{
+    display: inline-block;
     color: #AAA;
     background: #FFF;
     background-image: none;
-    font-weight: 300px;
+    height: 40px;
+    font-weight: 300;
     font-size: 16px;
     white-space: nowrap;
+    word-break:break-word;
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    margin-bottom: 3px;
+    margin: 3px;
     padding: 10px 30px;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    display: inline-block;
     appearance: none !important;
     border:solid 1px #EEE;
     cursor: pointer;
-    outline: none !important;
     user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+       transition:all 0.3s linear;
+    
 }
-.ui-button-disabled{
+/*
+ * State Button Style
+ */
+ .ui-button.ui-button-disabled{
     background-color: #EEE;
     border-color: #EEE;
     appearance: none !important;
     cursor: not-allowed;
 }
-.ui-button-primary{
+.ui-button.ui-button-primary{
     background-color: #1B9AF7;
     border-color: #1B9AF7;
     color: #FFF;
 }
-.ui-button-success{
+.ui-button.ui-button-success{
     background-color: #1ABC60;
     border-color: #1ABC60;
     color: #FFF; 
 }
-.ui-button-failure{
+.ui-button.ui-button-failure{
     background-color: #ED1941;
     border-color: #ED1941;
     color: #FFF;
 }
-.ui-button-warning{
+.ui-button.ui-button-warning{
     background-color: #FEAE1B;
     border-color: #FEAE1B;
     color: #FFF; 
 }
-.ui-button-info{
+.ui-button.ui-button-info{
     background-color: #B5D1D8;
     border-color: #B5D1D8;
     color: #FFF; 
 }
-.ui-button-lg{width: 100%;}
-.ui-button-transparent{background-color: transparent; color: #AAA;}
-.ui-button-circle {border-radius: 100%; }
+/*
+ * Size And Shap Button Style
+ */
+ .ui-button.ui-buttom-small{
+
+ }
+
+.ui-button-square{
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: none;
+}
+
+ /* .ui-button.ui-button-small, .ui-button.ui-button-shap{
+    padding: 0 10px;
+    width: 50px;
+    height: 30px;
+    font-size: 13px;
+ }
+ .ui-button.ui-button-shap{
+    padding: 5px;
+    width: 30px;
+ } */
+
+/*
+ * Background And Border  Button Style
+ */
+.ui-button-lg{width: 99%;}
+.ui-button.ui-button-transparent{background-color: transparent; color: #AAA;}
+.ui-button-box{border-radius: 10px;}
+.ui-button-round{border-radius: 20px;}
+.ui-button-square.ui-button-circle {border-radius: 100%; }
