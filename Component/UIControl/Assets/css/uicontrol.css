@@ -1,1 +1,23 @@
-.uicontrol-button{}
+/*
+ *
+ */
+.ui-uppercase{text-transform: uppercase;}
+.ui-lowercase{text-transform: lowercase;}
+.ui-capitalize{text-transform: capitalize;}
+.ui-small-caps{font-variant:small-caps;}
+
+/*
+* Base Button Style
+*
+* The default values for the .ui-button class
+*/
+.ui-button{
+    display: inline-block;
+    cursor: pointer;
+}
+.ui-button:visited{}
+.ui-button:focus,.ui-button:hover{}
+.ui-button-primary{}
+.ui-button-success{}
+.ui-button-failure{}
+.ui-button-warning{}
