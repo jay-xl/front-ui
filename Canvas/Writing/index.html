@@ -6,25 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Use Cavas to write</title>
     <link rel="shortcut icon" href="../../Assets/images/icon/favicon.ico">
-    <style>
-        body{background: #ccc;}
-        canvas{
-            cursor: pointer;
-            display: block;
-            margin: 10px auto;
-            padding: 0;
-            border: solid 1px #DDDDDD;
-            background: #ffffff;
-            -webkit-box-shadow: 7px 7px 8px rgba(0,0,0,0.5);
-            -moz-box-shadow: 7px 7px 8px rgba(0,0,0,0.5);
-            box-shadow: 7px 7px 8px rgba(0,0,0,0.5);
-        }
-    </style>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <canvas id="canvas">
         Canvas Not Support
     </canvas>
+    <div class="color-bar">
+        <ul>
+            <li class="active">#000</li>
+            <li>#ef5b9c</li>
+            <li>#ef4136</li>
+            <li>#f15a22</li>
+            <li>#228fbd</li>
+            <li>#76becc</li>
+            <li>#6950a1</li>
+            <li data-click="false">
+                1
+                <!-- <label for="">显示边框:</label><input type="checkbox"> |
+                <label for="">画笔粗细：</label> |
+                <i class="fa fa-trash"></i> -->
+            </li>
+        </ul>
+    </div>
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
