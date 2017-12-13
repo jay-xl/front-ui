@@ -120,6 +120,11 @@
         }
     };
 
+    // 保存 Canvas 图片
+    Writing.saveImag = function(){
+        var image = this.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        return image; 
+    }
     window.writing = Writing;
 })();
 
@@ -144,5 +149,27 @@ window.onload = function(){
             // 给点击的 target 添加 选中的样式
             target.classList.add('active');
         }
+
+        // 绑定保存按钮
+        if(target.classList.contains('fa-save')){
+            window.location.href = writing.saveImag();
+        }
+
+        // 绑定清空按钮
+        if(target.classList.contains('fa-trash')){
+            alert('清空');
+        }
+
+
+    },false);
+
+    // 绑定选择框更改事件
+    document.querySelector('#showBorder').addEventListener('change',function(){
+        writing.isShowBorder = this.checked;
+    },false);
+
+    // 绑定选择画笔粗细更改事件
+    document.querySelector('#selectLineWidth').addEventListener('change',function(){
+        writing.lineWidth = this.value;
     },false);
 }
