@@ -37,9 +37,9 @@ canvas{
     line-height: 30px;
     background: #fff;
     border: solid 2px transparent;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
     transition: all 0.5s linear;
