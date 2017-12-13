@@ -116,7 +116,7 @@
         var canvasByRect = this.canvas.getBoundingClientRect();
         return {
             x : clientX - canvasByRect.left * (this.canvas.width / canvasByRect.width),
-            y : clientY -canvasByRect.top * (this.canvas.height / canvasByRect.height)
+            y : clientY - canvasByRect.top * (this.canvas.height / canvasByRect.height)
         }
     };
 
