@@ -19,4 +19,4 @@
 2. [UIControl](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Component/UIControl/index.html)
 ### UI
 ### Other
-1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Other/Emoji/index.html)
+1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
