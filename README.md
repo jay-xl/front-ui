@@ -12,8 +12,7 @@
 - [Other](#other)
 
 ### Canvas
-1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Canvas/Writing/index.html)
-2. [Love](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Canvas/Love/index.html)
+1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/writing/index.html)
 
 ### Components
 1. [DatePicker](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Component/DatePicker/index.html)
