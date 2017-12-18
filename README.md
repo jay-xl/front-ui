@@ -7,7 +7,7 @@
 
 # Directory（目录）
 - [Canvas](#canvas)
-- [Component](#component)
+- [Components](#components)
 - [UI](#ui)
 - [Other](#other)
 
@@ -15,7 +15,7 @@
 1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Canvas/Writing/index.html)
 2. [Love](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Canvas/Love/index.html)
 
-### Component
+### Components
 1. [DatePicker](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Component/DatePicker/index.html)
 2. [UIControl](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/Component/UIControl/index.html)
 ### UI

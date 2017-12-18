@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Use Cavas to write</title>
+    <link rel="shortcut icon" href="../../Assets/images/icon/favicon.ico">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <canvas id="canvas">
+        Canvas Not Support
+    </canvas>
+    <div class="color-bar">
+        <ul>
+            <li class="active">#000</li>
+            <li>#ef5b9c</li>
+            <li>#ef4136</li>
+            <li>#f15a22</li>
+            <li>#228fbd</li>
+            <li>#76becc</li>
+            <li>#6950a1</li>
+            <li data-click="false">
+                <label for="showBorder">显示边框：</label><input type="checkbox" checked="checked" id="showBorder"> |
+                <label for="selectLineWidth">画笔粗细：</label>
+                <select name="" id="selectLineWidth">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select> | 
+                <i class="fa fa-square-o" title="橡皮擦"></i>&ensp;
+                <i class="fa fa-trash" title="清除"></i>&ensp;
+                <i class="fa fa-save" title="保存"></i>
+            </li>
+        </ul>
+    </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
