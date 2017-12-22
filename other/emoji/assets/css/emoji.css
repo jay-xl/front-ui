@@ -15,7 +15,7 @@ body {
 }
 .emoji:after {
     position: absolute;
-    bottom: -40px;
+    bottom: -28px;
     font-size: 18px;
     width: 60px;
     left: calc(50% - 30px);
