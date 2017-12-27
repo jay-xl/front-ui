@@ -13,6 +13,8 @@
 
 ### Canvas
 1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/writing/index.html)
+2. [Draw Wolf](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/draw-wolf/index.html)
+
 
 ### Components
 1. [DatePicker](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/components/datePicker/index.html)
