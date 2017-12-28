@@ -14,6 +14,7 @@
 ### Canvas
 1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/writing/index.html)
 2. [Draw Wolf](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/draw-wolf/index.html)
+3. [Love](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/love/index.html)
 
 
 ### Components
