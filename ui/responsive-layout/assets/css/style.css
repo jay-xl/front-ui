@@ -2,7 +2,6 @@
     padding: 0;margin: 0;
 }
 body{
-    margin-top: 35px;
     text-align: center;
 }
 .container{
@@ -13,24 +12,31 @@ header, footer{
     height:100px;
     line-height:100px;
     background:#eee;
-    margin-bottom:20px;
     vertical-align: middle;
 }
+header, #main, nav{
+    margin-bottom: 20px; 
+}
 /* 导航菜单样式 */
-ul{
+#nav .toggle-btn{
+    display: none;
+}
+#nav ul{
     list-style:none;
     padding: 0;
     margin:0;
+    font-size: 0;
+    letter-spacing: 0;
 }
 #nav li, #nav li a{
-    background: red;
     display: inline-block;
     padding: 7px 15px;
+    font-size: 16px;
     text-decoration: none;
+    color: #3b3b3b;
 }
-
-#main, nav{
-    margin-bottom:20px;
+#nav li:hover,#nav li.active{
+    background: #eee;
 }
 #main::after{
     content: '';
@@ -45,29 +51,40 @@ ul{
 #main article{
     width: 620px;
     margin-right: 20px;
-    background:#ddefcb;
+    background:#eee;
 }
 #main aside{
     width:320px;
-    background:#ffcbdd;
+    background:#eee;
 }
 
 /* 屏幕宽度大于或等于 1200px 时的样式 */
 @media ( min-width: 1200px ){
     .container{
-        width: 1700px;
+        width: 100%;
     }
     #main article{
         width: 770px;
         margin-right: 30px;
     }
     #main aside{
-        width:900px;
+        width:370px;
     }
 }
 
-/* 屏幕宽度小于或等于 950px 时的样式 */
-@media ( max-width:959px ) {
+/* 屏幕宽度小于或等于 959px 时的样式 */
+@media ( max-width: 959px ) {
+    .container{
+        width: 100%;
+    }
+    #main article{
+        width: 67%;
+    }
+    #main aside{
+        width: 30%;
+    }
+}
+@media ( max-width: 767px ) {
     .container,#main article,#main aside{
         float: none;
         width: 100%;
@@ -75,5 +92,45 @@ ul{
     #main article{
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    /* 切换按钮 */
+    #nav .toggle-btn{
+        display: inline-block;
+        font-size: 25px;
+        text-decoration: none;
+        background: #000;
+        color: #fff;
+        padding: 7px 15px;
+        position: absolute;
+        right: 0;
+        top: 50px;
+    }
+    /* 隐藏关闭按钮 与 导航菜单 */
+    #nav .close, #nav ul{
+        display: none;
+    }
+    /* 导航为目标状态的时候显示关闭按钮 */
+    #nav:target .close{
+        display: inline-block;
+    }
+    /* 目标状态下的导航样式 */
+    #nav:target ul{
+        display: block;
+        background: #000;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+    }
+    #nav:target li,#nav:target li a{
+        display: block;
+        color: #eee;
+        text-align: left;
+    }
+    #nav:target li.active{
+        background: #272727;
+    }
+    #nav:target li:hover{
+        background: #3b3b3b;
     }
 }
