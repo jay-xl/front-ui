@@ -1,21 +1,79 @@
+*{
+    padding: 0;margin: 0;
+}
 body{
     margin-top: 35px;
     text-align: center;
 }
-
-h3, p{
-    padding: 20px;
+.container{
+    width: 960px;
+    margin: 0 auto;
 }
-
-#header, #navigation, #footer, #mainbody, #sidebar{
+header, footer{
     height:100px;
-    line-height:60px;
+    line-height:100px;
     background:#eee;
     margin-bottom:20px;
     vertical-align: middle;
 }
+/* 导航菜单样式 */
+ul{
+    list-style:none;
+    padding: 0;
+    margin:0;
+}
+#nav li, #nav li a{
+    background: red;
+    display: inline-block;
+    padding: 7px 15px;
+    text-decoration: none;
+}
 
-.container{
-    width: 960px;
-    margin: 0 auto;
+#main, nav{
+    margin-bottom:20px;
+}
+#main::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#main article,#main aside{
+    height: 300px;
+    line-height: 300px;
+    float: left;
+}
+#main article{
+    width: 620px;
+    margin-right: 20px;
+    background:#ddefcb;
+}
+#main aside{
+    width:320px;
+    background:#ffcbdd;
+}
+
+/* 屏幕宽度大于或等于 1200px 时的样式 */
+@media ( min-width: 1200px ){
+    .container{
+        width: 1700px;
+    }
+    #main article{
+        width: 770px;
+        margin-right: 30px;
+    }
+    #main aside{
+        width:900px;
+    }
+}
+
+/* 屏幕宽度小于或等于 950px 时的样式 */
+@media ( max-width:959px ) {
+    .container,#main article,#main aside{
+        float: none;
+        width: 100%;
+    }
+    #main article{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
