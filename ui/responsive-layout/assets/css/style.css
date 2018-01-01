@@ -1,0 +1,21 @@
+body{
+    margin-top: 35px;
+    text-align: center;
+}
+
+h3, p{
+    padding: 20px;
+}
+
+#header, #navigation, #footer, #mainbody, #sidebar{
+    height:100px;
+    line-height:60px;
+    background:#eee;
+    margin-bottom:20px;
+    vertical-align: middle;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
