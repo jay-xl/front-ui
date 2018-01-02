@@ -25,13 +25,21 @@ body {
 	box-shadow:      0px 0px 4px 0px rgba(0,0,0,0.37);
 }
 .container li {
-	width: 180px;
-	height: 180px;
-	line-height: 176px;
+    padding: 70px;
 	text-align: center;
 	float: left;
-	background-repeat: no-repeat;
-	background-position: center;
+    cursor: pointer;
+}
+.container li i{
+    display: block;
+    width: 80px;
+    height: 8px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.container li i:last-child{
+    margin-bottom: 0;
 }
 .container li:nth-child(1) {
 	background-color: #1ABC9C;
@@ -69,3 +77,5 @@ body {
 .container li:nth-child(12) {
 	background-color: #E74C3C;
 }
+
+/* demo1 样式 */
