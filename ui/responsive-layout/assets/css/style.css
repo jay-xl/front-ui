@@ -14,7 +14,7 @@ header, footer{
     background:#eee;
     vertical-align: middle;
 }
-header, #main, nav{
+header, #main, nav, #showcase{
     margin-bottom: 20px; 
 }
 /* 导航菜单样式 */
@@ -58,6 +58,12 @@ header, #main, nav{
     background:#eee;
 }
 
+/* 图片展示样式 */
+#showcase{
+    background: url(../images/1.jpg) 50% 50% no-repeat;
+    background-size:cover;
+    padding-top: 56%;
+}
 /* 屏幕宽度大于或等于 1200px 时的样式 */
 @media ( min-width: 1200px ){
     .container{
