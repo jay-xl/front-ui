@@ -20,5 +20,7 @@
 ### Components
 1. [DatePicker](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/components/datePicker/index.html)
 ### UI
+1. [Responsive Layout](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/ui/responsive-l;ayout/index.html)
+
 ### Other
 1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
