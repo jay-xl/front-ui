@@ -16,6 +16,5 @@
                 li.classList.remove('close');
             }
         }
-        console.log();
     },false);
 })();
