@@ -7,11 +7,13 @@
         if(target.localName === 'i'){
             li = document.querySelector(target.localName).parentNode;
         }
-        if(li.nodeName === 'LI'){
+        if(li.nodeName.toLowerCase() === 'li'){
             if(li.classList.contains('open')){
-
+                li.classList.remove('open');
+                li.classList.add('close');
             }else{
                 li.classList.add('open');
+                li.classList.remove('close');
             }
         }
         console.log();
