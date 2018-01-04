@@ -87,7 +87,8 @@ body {
 .container li:nth-child(12) {
 	background-color: #E74C3C;
 }
-/* demo1 样式 */
+
+/*================== demo1 样式 ==================*/
 #demo1.open i:nth-child(1){
     animation: demo1-1-open 0.6s ease-out forwards;
 }
@@ -143,4 +144,27 @@ body {
     65%  { transform: translate(0, -70px); animation-timing-function: cubic-bezier(0,1,1,1); }
     80%  { width: 0px; }
     100% { width: 100px; transform: translate(0, 0px); }
+}
+
+/*================== demo2 样式 ==================*/
+#demo2.open i:nth-child(1){
+    animation: demo2-1-open 0.2s ease-out forwards;
+}
+#demo2.open i:nth-child(2){
+    animation: demo2-2-open 0.3s linear forwards;
+}
+#demo2.open i:nth-child(3){
+	animation: demo2-3-open 0.2s linear forwards;
+}
+@keyframes demo2-1-open{
+	80%  { transform: translate(0, 0); }
+    100% { transform-origin: 0 0; transform: rotate(40deg) translate(2px,-23px); }
+}
+@keyframes demo2-2-open{
+	from { opacity: 1; }
+	to	{ opacity: 0; }
+}
+@keyframes demo2-3-open{
+	80%  { transform: translate(0, 0); }
+    100% { transform-origin: 0 0; transform: rotate(-40deg) translate(-4px,19px); }
 }
