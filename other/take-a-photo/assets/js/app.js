@@ -5,7 +5,7 @@
      * 功能初始化
      */
     userMedia.init = function () {
-        this.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.getUserMedia ||
+        var getUserMediaSupport = navigator.mediaDevices.getUserMedia || navigator.getUserMedia ||
             navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
         this.video = document.querySelector('#video');
@@ -15,11 +15,11 @@
         userMedia.resizeCanvas();
 
         // 判断当前浏览器是否支持 getUserMedia
-        if (this.getUserMedia) {
+        if (getUserMediaSupport) {
             this.callGetUserMedia({ audio: true, video: true }, function (stream) {
                 alert('fdsafsdaf');
-            }, function (error) {
-                alert('Error:' + error.name);
+            }, function (e) {
+                alert('Error:' + e.name +" "+ e.message);
             });
         } else {
             alert('当前浏览器不支持 getUserMedia API');
@@ -45,11 +45,19 @@
     userMedia.callGetUserMedia = function (constraints, success, error) {
         // 新版 getUserMedia API 调用方法
         if (navigator.mediaDevices.getUserMedia) {
-            this.getUserMedia(constraints).then(success).catch(error);
+            navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
+        }
+        // 内核为 Webkit 的浏览器
+        else if(navigator.webkitGetUserMedia){
+            navigator.webkitGetUserMedia(constraints, success, error);
+        }
+        // Firfox 的浏览器
+        else if(navigator.mozGetUserMedia){
+            navigator.mozGetUserMedia(constraints, success, error);
         }
         //旧版 getUserMedia API 调用方法
         else {
-            this.getUserMedia(constraints, success, error);
+            navigator.getUserMedia(constraints, success, error);
         }
     }
     userMedia.init();
