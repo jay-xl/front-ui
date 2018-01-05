@@ -10,12 +10,12 @@
 
         this.video = document.querySelector('#video');
         this.canvas = document.querySelector('#canvas');
-        this.context = this.canvas.getContext('2d');
+        var context = this.canvas.getContext('2d');
         // 重置 Canvas 大小
         userMedia.resizeCanvas();
         // 判断当前浏览器是否支持 getUserMedia
+        var _video = this.video;
         if (getUserMediaSupport) {
-            var _video = this.video;
             var constraints = { video: { width: _video.offsetWidth, height: _video.offsetHeight } };
             this.callGetUserMedia(constraints, function (stream) {
                 // 兼容 webkit 内核浏览器 获取 URL 对象
@@ -30,6 +30,11 @@
         } else {
             alert('当前浏览器不支持 getUserMedia API');
         }
+
+        // Capture 点击事件
+        document.querySelector('#capture').addEventListener('click',function(){
+            context.drawImage(_video,0,0,_video.width,_video.height);
+        },false);
     };
 
     /**
