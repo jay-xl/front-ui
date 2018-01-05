@@ -16,7 +16,7 @@
         // 判断当前浏览器是否支持 getUserMedia
         var _video = this.video;
         if (getUserMediaSupport) {
-            var constraints = { video: { width: _video.offsetWidth, height: _video.offsetHeight } };
+            var constraints = { video: { width: _video.offsetWidth, height: _video.offsetHeight, facingMode: { exact: "environment" } } };
             this.callGetUserMedia(constraints, function (stream) {
                 // 兼容 webkit 内核浏览器 获取 URL 对象
                 var CompleURL = window.URL || window.webkitURL;
@@ -33,7 +33,6 @@
 
         // Capture 点击事件
         document.querySelector('#capture').addEventListener('click',function(){
-            alert('fdsafdsafsd');
             context.drawImage(_video,0,0,_video.offsetWidth,_video.offsetHeight);
         },false);
     };
