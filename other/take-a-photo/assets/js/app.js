@@ -16,7 +16,7 @@
 
         // 判断当前浏览器是否支持 getUserMedia
         if (this.getUserMedia) {
-            this.callGetUserMedia({ video:true }, function (stream) {
+            this.callGetUserMedia({ audio: true, video: true }, function (stream) {
                 alert('fdsafsdaf');
             }, function (error) {
                 alert('Error:' + error.name);

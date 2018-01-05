@@ -25,3 +25,4 @@
 
 ### Other
 1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
+2. [Take a photo](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/take-a-photo/index.html)
