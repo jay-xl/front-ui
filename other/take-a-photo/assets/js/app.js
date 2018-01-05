@@ -13,13 +13,19 @@
         this.context = this.canvas.getContext('2d');
         // 重置 Canvas 大小
         userMedia.resizeCanvas();
-
         // 判断当前浏览器是否支持 getUserMedia
         if (getUserMediaSupport) {
-            this.callGetUserMedia({ audio: true, video: true }, function (stream) {
-                alert('fdsafsdaf');
+            var _video = this.video;
+            var constraints = { video: { width: _video.offsetWidth, height: _video.offsetHeight } };
+            this.callGetUserMedia(constraints, function (stream) {
+                // 兼容 webkit 内核浏览器 获取 URL 对象
+                var CompleURL = window.URL || window.webkitURL;
+                video.src = CompleURL.createObjectURL(stream);
+                video.onloadedmetadata = function (e) {
+                    video.play();
+                }
             }, function (e) {
-                alert('Error:' + e.name +" "+ e.message);
+                alert('Error:' + e.name + " " + e.message);
             });
         } else {
             alert('当前浏览器不支持 getUserMedia API');
@@ -48,11 +54,11 @@
             navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error);
         }
         // 内核为 Webkit 的浏览器
-        else if(navigator.webkitGetUserMedia){
+        else if (navigator.webkitGetUserMedia) {
             navigator.webkitGetUserMedia(constraints, success, error);
         }
         // Firfox 的浏览器
-        else if(navigator.mozGetUserMedia){
+        else if (navigator.mozGetUserMedia) {
             navigator.mozGetUserMedia(constraints, success, error);
         }
         //旧版 getUserMedia API 调用方法
