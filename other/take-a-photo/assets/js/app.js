@@ -33,6 +33,7 @@
 
         // Capture 点击事件
         document.querySelector('#capture').addEventListener('click',function(){
+            alert('fdsafdsafsd');
             context.drawImage(_video,0,0,_video.width,_video.height);
         },false);
     };
