@@ -38,8 +38,8 @@ body {
 	cursor: pointer;
 }
 .container section > div.menu{
-	height: 150px;
-	width: 150px;
+	height: 130px;
+	width: 130px;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -83,7 +83,7 @@ body {
 	background-color: #F2276C;
 }
 .container section:nth-of-type(6) {
-	background-color: #FF7A04;
+	background-color: #A3CF62;
 }
 
 /*================== demo1 样式 ==================*/
@@ -189,9 +189,115 @@ body {
 }
 
 /*================== demo3 样式 ==================*/
-#demo3.open i:nth-child(1){
+/* #demo3.open i:nth-child(1){
+	transform: translateY(15px);
 }
 #demo3.open i:nth-child(2){
 }
 #demo3.open i:nth-child(3){
+	transform: translateY(-15px);
+} */
+
+/*================== demo4 样式 ==================*/
+#demo4.open div.menu::after,#demo4.close div.menu::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 130px;
+	height: 130px;
+	background: transparent;
+	border-radius: 100%;
+	border-style: solid;
+	border-width: 5px;
+}
+#demo4.open div.menu::after{
+	border-color: transparent;
+	animation: demo4-open-menu-circle 1s forwards; 
+}
+#demo4.open i:nth-child(1){
+	opacity: 0;
+	width: 8px;
+	transform-origin: center center;
+	transform: translate(-30px,-15px) rotate(40deg);
+	animation: demo4-1-open 1.3s forwards;
+}
+#demo4.open i:nth-child(2){
+	animation: demo4-2-open 0.2s forwards;
+}
+#demo4.open i:nth-child(3){
+	opacity: 0;
+	width: 8px;
+	transform-origin: center center;
+	transform: translate(40px,-45px) rotate(-40deg);
+	animation: demo4-3-open 1.3s forwards;
+}
+@keyframes demo4-open-menu-circle {
+	0% {
+		border-color: transparent;
+		transform: rotate(0deg);
+	}
+	20%	{
+		border-color: transparent #fff transparent transparent;
+		transform: rotate(-35deg);
+	}
+	50%	{
+		border-color: transparent #fff #fff transparent;
+	}
+	75% {
+		border-color: transparent #fff #fff #fff;
+	}
+	100% {
+		border-color: #fff;
+		transform: rotate(-300deg);
+	}
+}
+@keyframes demo4-1-open{
+	from { width: 8px;  opacity: 1; }
+	to { width: 100px; opacity: 1; transform-origin: center center; transform: translate(5px,15px) rotate(40deg); }
+}
+@keyframes demo4-2-open{
+	from { width: 100px; }
+	to { width: 8px; transform: translateX(80px); opacity: 0; }
+}
+@keyframes demo4-3-open{
+	from { width: 8px;  opacity: 1; }
+	to { width: 100px; opacity: 1; transform-origin: center center; transform: translate(5px,-15px) rotate(-40deg); }
+}
+#demo4.close div.menu::after{
+	border-color: #fff;
+	animation: demo4-close-menu-circle 1s forwards; 
+}
+#demo4.close i:nth-child(2){
+	width: 8px;
+	transform: translateX(80px);
+	opacity: 0;
+	animation: demo4-2-close 1s forwards; 
+}
+@keyframes demo4-close-menu-circle {
+	0% {
+		transform: rotate(0deg);
+	}
+	20% {
+		border-color: transparent #fff #fff #fff;
+		transform: rotate(35deg);
+	}
+	50%	{
+		border-color: transparent #fff #fff transparent;
+		
+	}
+	75% {
+		border-color: transparent #fff transparent transparent;
+	}
+	100% {
+		border-color: transparent;
+		transform: rotate(300deg);
+	}
+}
+@keyframes demo4-2-close{
+	from { width: 8px; }
+	to { width: 100px; transform: translateX(0); opacity: 1; }
 }
