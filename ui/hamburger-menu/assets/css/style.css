@@ -1,3 +1,4 @@
+/*================== Basic ==================*/
 *{margin:0; padding: 0;}
 html {
 	height: 100%;
@@ -15,12 +16,11 @@ body {
 	font-weight: 300;
 }
 .container {
-	background: #fff;
+	background: transparent;
 	list-style: none;
 	padding: 0;
 	-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.37);
 	box-shadow:      0px 0px 4px 0px rgba(0,0,0,0.37);
-	background: red;
 }
 .container::after{
 	content: '';
@@ -30,14 +30,42 @@ body {
 }
 .container section{
 	width: 50%;
-	height: 180px;
-	line-height: 180px;
+	height: 300px;
+	line-height: 300px;
 	position: relative;
 	text-align: center;
 	float: left;
 	cursor: pointer;
 }
-
+.container section > div.menu{
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin:auto;
+}
+.container section > div.menu i{
+	display:block;
+	width:100px;
+	height:8px;
+	background: #fff;
+	border-radius: 5px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+}
+.container section > div.menu i:first-of-type{
+	top: -30px;
+}
+.container section > div.menu i:last-of-type{
+	top: 30px;
+}
 /*================== 设置每个 section 的背景颜色 ==================*/
 .container section:nth-of-type(1) {
 	background-color: #1ABC9C;
@@ -49,29 +77,121 @@ body {
 	background-color: #F39C12;
 }
 .container section:nth-of-type(4) {
-	background-color: #9B59B6;
+	background-color: #2E64FF;
 }
 .container section:nth-of-type(5) {
-	background-color: #3498DB;
+	background-color: #F2276C;
 }
 .container section:nth-of-type(6) {
-	background-color: #E74C3C;
+	background-color: #FF7A04;
 }
-.container section:nth-of-type(7) {
-	background-color: #2ECC71;
+
+/*================== demo1 样式 ==================*/
+#demo1.open i:nth-child(1){
+    animation: demo1-1-open 0.6s ease-out forwards;
 }
-.container section:nth-of-type(8) {
-	background-color: #2C3E50;
+#demo1.open i:nth-child(2){
+    animation: demo1-2-open 0.6s linear forwards;
 }
-.container section:nth-of-type(9) {
-	background-color: #F1C40F;
+#demo1.open i:nth-child(3){
+    animation: demo1-3-open 0.6s linear forwards;
 }
-.container section:nth-of-type(10) {
-	background-color: #8E44AD;
+@keyframes demo1-1-open{
+	0%  { width: 100px; }
+	40%	{ width:8px; transform: translateX(50px); }
+	75%, 80% { width: 8px; transform: translate(35px, -50px); animation-timing-function: cubic-bezier(1,0,0,0); }
+	100% {width: 8px; transform: translate(35px, 45px); }
 }
-.container section:nth-of-type(11) {
-	background-color: #2980B9;
+@keyframes demo1-2-open{
+    80%  { transform: translate(0, 0); }
+    100% { transform-origin: 50% 50%; transform: rotate(40deg); }
 }
-.container section:nth-of-type(12) {
-	background-color: #E74C3C;
+@keyframes demo1-3-open{
+    80%  { transform: translate(0, 0); }
+    100% { transform-origin: 50% 50%; transform: translate(0,-18px) rotate(-40deg); }
+}
+#demo1.close i:nth-child(1){
+	width: 8px;
+    transform: translate(0, 45px);
+    animation: demo1-1-close 0.6s ease-out forwards;
+}
+#demo1.close i:nth-child(2){
+	transform-origin: 50% 50%; transform: rotate(40deg);
+	animation: demo1-2-close .6s ease-out forwards;
+}
+#demo1.close i:nth-child(3){
+	transform-origin: 50% 50%; transform: translate(0,-18px) rotate(-40deg);
+	animation: demo1-3-close .6s ease-out forwards;
+}
+@keyframes demo1-1-close {
+    0%, 70% { width: 0; }
+    100%	{ width: 100px; transform: translate(0, 0); }
+}
+@keyframes demo1-2-close {
+    0%   { width: 100px;}
+    20%  { width: 8px; transform: translate(0, 0px) rotate(40deg); }
+    40%  { width: 0px;}
+    65%  { transform: translate(0, -70px); animation-timing-function: cubic-bezier(0,1,1,1); }
+    80%  { width: 0px; }
+    100% { width: 100px; transform: translate(0, 0px); }
+}
+@keyframes demo1-3-close {
+    0%   { width: 100px;}
+    20%  { width: 8px; transform: translate(0, 0px) rotate(40deg); }
+    40%  { width: 0px;}
+    65%  { transform: translate(0, -70px); animation-timing-function: cubic-bezier(0,1,1,1); }
+    80%  { width: 0px; }
+    100% { width: 100px; transform: translate(0, 0px); }
+}
+
+/*================== demo2 样式 ==================*/
+#demo2.open i:nth-child(1){
+    animation: demo2-1-open 0.6s ease-out forwards;
+}
+#demo2.open i:nth-child(2){
+    animation: demo2-2-open 0.3s linear forwards;
+}
+#demo2.open i:nth-child(3){
+	animation: demo2-3-open 0.6s linear forwards;
+}
+@keyframes demo2-1-open{
+	80%  { transform: translate(0, 0); }
+    100% { transform-origin: 0 0; transform: rotate(40deg) translate(2px,-23px); }
+}
+@keyframes demo2-2-open{
+	0%  { width: 100px; }
+	100%	{ width:8px; transform: translateX(50px); opacity: 0; }
+}
+@keyframes demo2-3-open{
+	80%  { transform: translate(0, 0); }
+    100% { transform-origin: 0 0; transform: rotate(-40deg) translate(-4px,19px); }
+}
+#demo2.close i:nth-child(1){
+    animation: demo2-1-close 0.6s ease-out forwards;
+}
+#demo2.close i:nth-child(2){
+    animation: demo2-2-close 0.4s ease-out forwards;
+}
+#demo2.close i:nth-child(3){
+	animation: demo2-3-close 0.6s linear forwards;
+}
+@keyframes demo2-1-close{
+	from { transform-origin: 0 0; transform: rotate(40deg) translate(2px,-23px); }
+    to 	 { transform-origin: 0 0; transform: rotate(0deg) translate(0,0); }
+}
+@keyframes demo2-2-close{
+	from  { width: 8px; opacity: 0;transform: translateX(50px); }
+	to	  { width:100px;  opacity: 1; }
+}
+@keyframes demo2-3-close{
+	from { transform-origin: 0 0; transform: rotate(-40deg) translate(-4px,19px); }
+    to 	 { transform-origin: 0 0; transform: rotate(0deg) translate(0,0); }
+}
+
+/*================== demo3 样式 ==================*/
+#demo3.open i:nth-child(1){
+}
+#demo3.open i:nth-child(2){
+}
+#demo3.open i:nth-child(3){
 }
