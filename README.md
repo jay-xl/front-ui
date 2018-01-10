@@ -22,6 +22,7 @@
 ### UI
 1. [Responsive Layout](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/ui/responsive-layout/index.html)
 2. [Hamburger Menus](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/ui/hamburger-menus/index.html)
+3. [Gallery 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/ui/gallery-3d/index.html)
 
 ### Other
 1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
