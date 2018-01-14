@@ -190,21 +190,54 @@ body {
 
 /*================== demo3 样式 ==================*/
 #demo3.open i:nth-child(1){
-	transform: translateY(15px);
-	transform-origin: center center;
-	transform: rotate(45deg);
-	transition: all 0.6s;
+	animation: demo3-1-open 0.6s ease forwards;
 }
 #demo3.open i:nth-child(2){
-	
+	animation: demo3-2-open 0.7s ease forwards;
 }
 #demo3.open i:nth-child(3){
-	transform: translateY(-15px);
-	transform-origin: center center;
-	transform: rotate(-45deg);
-	transition: all 0.6s;
+	animation: demo3-3-open 0.6s ease forwards;
 }
-
+@keyframes demo3-1-open{
+	0% { transform: translateY(0); }
+	50% { transform: translateY(15px); }
+	100% { transform-origin: center center; transform: translateY(15px) rotate(40deg); }
+}
+@keyframes demo3-2-open{
+	from  { opacity: 1;}
+	to	  { opacity: 0; }
+}
+@keyframes demo3-3-open{
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-15px); }
+	100% { transform-origin: center center; transform: translateY(-15px) rotate(-40deg); }
+}
+#demo3.close i:nth-child(1){
+	transform-origin: center center; transform: translateY(15px) rotate(40deg); 
+	animation: demo3-1-close 0.6s ease forwards;
+}
+#demo3.close i:nth-child(2){
+	opacity: 0;
+	animation: demo3-2-close 0.7s ease forwards;
+}
+#demo3.close i:nth-child(3){
+	transform-origin: center center; transform: translateY(-15px) rotate(-40deg); 
+	animation: demo3-3-close 0.6s ease forwards;
+}
+@keyframes demo3-1-close{
+	0% { transform: translateY(15px) rotate(40deg); }
+	50% { transform: translateY(15px) rotate(0);}
+	100% { transform: translateY(0) rotate(0); }
+}
+@keyframes demo3-2-close{
+	from  { opacity: 0;}
+	to	  { opacity: 1; }
+}
+@keyframes demo3-3-close{
+	0% { transform: translateY(-15px) rotate(-40deg); }
+	50% { transform: translateY(-15px) rotate(0);}
+	100% { transform: translateY(0) rotate(0); }
+}
 /*================== demo4 样式 ==================*/
 #demo4.open div.menu::after,#demo4.close div.menu::after{
 	content: '';
