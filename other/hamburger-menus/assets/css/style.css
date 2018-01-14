@@ -189,14 +189,21 @@ body {
 }
 
 /*================== demo3 样式 ==================*/
-/* #demo3.open i:nth-child(1){
+#demo3.open i:nth-child(1){
 	transform: translateY(15px);
+	transform-origin: center center;
+	transform: rotate(45deg);
+	transition: all 0.6s;
 }
 #demo3.open i:nth-child(2){
+	
 }
 #demo3.open i:nth-child(3){
 	transform: translateY(-15px);
-} */
+	transform-origin: center center;
+	transform: rotate(-45deg);
+	transition: all 0.6s;
+}
 
 /*================== demo4 样式 ==================*/
 #demo4.open div.menu::after,#demo4.close div.menu::after{
