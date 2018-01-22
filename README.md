@@ -17,10 +17,11 @@
 3. [Pie Chart](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/pie-chart/index.html)
 
 ### Components
-1. [DatePicker](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/components/datePicker/index.html)
+
 ### Other
 1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
 2. [Take a photo](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/take-a-photo/index.html)
 3. [Responsive Layout](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/responsive-layout/index.html)
 4. [Hamburger Menus](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/hamburger-menus/index.html)
 5. [The Olympic Rings](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/the-olympic-rings/index.html)
+6. [Card Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/card-animation/index.html)
