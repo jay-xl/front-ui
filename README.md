@@ -25,3 +25,4 @@
 4. [Hamburger Menus](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/hamburger-menus/index.html)
 5. [The Olympic Rings](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/the-olympic-rings/index.html)
 6. [Card Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/card-animation/index.html)
+7. [CSS 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/css3-3d/index.html)
