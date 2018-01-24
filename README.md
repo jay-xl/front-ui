@@ -14,7 +14,8 @@
 1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/writing/index.html)
 2. [Draw Wolf](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/draw-wolf/index.html)
 3. [Love](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/love/index.html)
-3. [Pie Chart](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/pie-chart/index.html)
+4. [Pie Chart](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/pie-chart/index.html)
+5. [Hex](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/hex/index.html)
 
 ### Components
 
