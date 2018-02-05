@@ -8,7 +8,7 @@
 # Directory（目录）
 - [Canvas](#canvas)
 - [Components](#components)
-- [Other](#other)
+- [Other](#other) 
 
 ### Canvas
 1. [Writing](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/writing/index.html)
