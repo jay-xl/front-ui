@@ -16,7 +16,7 @@
 3. [Love](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/love/index.html)
 4. [Pie Chart](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/pie-chart/index.html)
 5. [Hex](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/hex/index.html)
-6.[Fireworks](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/fireworks/index.html)
+6. [Fireworks](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/fireworks/index.html)
 ### Components
 
 ### Other
