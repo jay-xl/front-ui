@@ -1,5 +1,5 @@
 /*================== Basic ==================*/
-*{margin:0; padding: 0;}
+html,body{margin:0; padding: 0;}
 html {
 	height: 100%;
 	background: #3023ae;
