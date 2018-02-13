@@ -27,4 +27,4 @@
 5. [Loading](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/loading/index.html)
 6. [The Olympic Rings](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/the-olympic-rings/index.html)
 7. [Card Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/card-animation/index.html)
-8. [CSS 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/css3-3d/index.html)
+8. [CSS 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/css3-3d/index.html) 
