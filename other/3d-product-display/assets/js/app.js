@@ -1,18 +1,15 @@
 'use strict';
-(function(){
+(function () {
     const oBox = document.querySelector('.box');
+
+    // 鼠标按下
+    const mousePoint = { x: 0, y: 0 };
 
     /**
      * 鼠标按下事件
-     */
-    oBox.addEventListener('mousedown',function(e){
-        console.log('鼠标按下');
-    },false);
+    */
+    oBox.addEventListener('mousedown', function (e) {
+        console.log('fds');
+    }, false);
 
-    /**
-     * 鼠标抬起事件
-     */
-    oBox.addEventListener('mouseup',function(e){
-        console.log('鼠标抬起');
-    },false);
 })();
