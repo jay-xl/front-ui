@@ -17,9 +17,10 @@ div.box{
     margin-left: -170px;
     width: 340px;
     height: 690px;
+    border:1px solid #ccc;
     box-sizing: border-box;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    /* transform: rotateX(35deg); */
     cursor:move;
 }
 
@@ -29,17 +30,24 @@ div.box > div{
     top: 0;
     width: inherit;
     height: inherit;
-    background-size:contain;
 }
 div.box > div.front{
     background: url("../images/t1.png") no-repeat center transparent;
+    -webkit-transform: translateZ(33px);
+    -ms-transform: translateZ(33px);
+    -moz-transform: translateZ(33px);
+    -o-transform: translateZ(33px);
     transform: translateZ(33px);
 }
 div.box > div.back{
     background: url("../images/t6.png") no-repeat center transparent;
+    -webkit-transform: translateZ(-33px);
+    -ms-transform: translateZ(-33px);
+    -moz-transform: translateZ(-33px);
+    -o-transform: translateZ(-33px);
     transform: translateZ(-33px);
 }
 div.box > div.top{
     background: url("../images/t5.png") no-repeat center transparent;
-    /* transform: rotateX(70deg); */
+    transform: rotateX(90deg);
 }
