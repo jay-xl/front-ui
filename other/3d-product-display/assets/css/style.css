@@ -21,7 +21,7 @@ div.box{
     box-sizing: border-box;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    cursor:move;
+    cursor: url("data:image/gif;base64,R0lGODlhEAAQAJECAAAAAP///////wAAACH5BAEAAAIALAAAAAAQABAAQAI3lC8AeBDvgosQxQtne7yvLWGStVBelXBKqDJpNzLKq3xWBlU2nUs4C/O8cCvU0EfZGUwt19FYAAA7"), ew-resize;
 }
 
 div.box > div{
@@ -30,7 +30,9 @@ div.box > div{
     top: 0;
     width: inherit;
     height: inherit;
+    background-size: 100% 100%;
 }
+
 div.box > div.front{
     background: url("../images/t1.png") no-repeat center transparent;
     -webkit-transform: translateZ(33px);
@@ -39,6 +41,7 @@ div.box > div.front{
     -o-transform: translateZ(33px);
     transform: translateZ(33px);
 }
+
 div.box > div.back{
     background: url("../images/t6.png") no-repeat center transparent;
     -webkit-transform: translateZ(-33px);
@@ -47,7 +50,11 @@ div.box > div.back{
     -o-transform: translateZ(-33px);
     transform: translateZ(-33px);
 }
+
+/* 
+
+
 div.box > div.top{
     background: url("../images/t5.png") no-repeat center transparent;
     transform: rotateX(90deg);
-}
+} */
