@@ -8,7 +8,8 @@ html,body{
     overflow: hidden;
 }
 div{margin: 0;padding: 0;}
-.box{
+
+div.box{
     position: relative;
     top: 50%;
     left: 50%;
@@ -16,5 +17,19 @@ div{margin: 0;padding: 0;}
     margin-left: -170px;
     width: 340px;
     height: 690px;
-    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    cursor:move;
+}
+
+div.box > div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    background-size:contain;
+}
+div.box > div.front{
+    background: url("../images/t1.png") no-repeat center transparent;
 }
