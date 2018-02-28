@@ -18,6 +18,7 @@ div.box{
     width: 340px;
     height: 690px;
     border:1px solid #ccc;
+    background: red;
     box-sizing: border-box;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
