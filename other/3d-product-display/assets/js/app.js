@@ -27,7 +27,7 @@
 
                 // 计算旋转角度
                 rotate.x += moveX * 0.2;
-                rotate.y += moveY * 0.2;
+                rotate.y -= moveY * 0.2;
 
                 // 设置 box 旋转样式
                 oBox.style.transform = 'rotateY(' + rotate.x + 'deg) rotateX(' + rotate.y + 'deg)';
