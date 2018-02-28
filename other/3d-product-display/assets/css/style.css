@@ -17,8 +17,8 @@ div.box{
     margin-left: -170px;
     width: 340px;
     height: 690px;
-    border:1px solid #ccc;
-    background: red;
+    /* border:1px solid #ccc;
+    background: red; */
     box-sizing: border-box;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -36,26 +36,25 @@ div.box > div{
 
 div.box > div.front{
     background: url("../images/t1.png") no-repeat center transparent;
-    -webkit-transform: translateZ(33px);
-    -ms-transform: translateZ(33px);
-    -moz-transform: translateZ(33px);
-    -o-transform: translateZ(33px);
-    transform: translateZ(33px);
+    -webkit-transform: translateZ(16px);
+    -ms-transform: translateZ(16px);
+    -moz-transform: translateZ(16px);
+    -o-transform: translateZ(16px);
+    transform: translateZ(16px);
 }
 
 div.box > div.back{
     background: url("../images/t6.png") no-repeat center transparent;
-    -webkit-transform: translateZ(-33px);
-    -ms-transform: translateZ(-33px);
-    -moz-transform: translateZ(-33px);
-    -o-transform: translateZ(-33px);
-    transform: translateZ(-33px);
+    -webkit-transform: translateZ(-16px);
+    -ms-transform: translateZ(-16px);
+    -moz-transform: translateZ(-16px);
+    -o-transform: translateZ(-16px);
+    transform: translateZ(-16px);
 }
 
-/* 
-
-
-div.box > div.top{
+/* div.box > div.top{
+    width: 240px;
+    height: 33px;
     background: url("../images/t5.png") no-repeat center transparent;
-    transform: rotateX(90deg);
+    transform: translateY(-10px) rotateX(90deg);
 } */
