@@ -1,7 +1,13 @@
-body{text-align:center;}
-#label{border:1px solid #ccc;background-color:#fff;text-align:center;height:300px; width:300px;margin:20px auto;position:relative;}
-#get_image{position:absolute;}
-#edit_pic{position:absolute;display:none;background:#000;}
-#cover_box{position: absolute;z-index: 9999;display:none;top:0px;left:0px;}
-#show_edit{margin: 0 auto;display:inline-block;}
-#show_pic{height:100px;width:100px;border:2px solid #000;overflow:hidden;margin:0 auto;display:inline-block; }
+/*================== Basic ==================*/
+html,body{margin:0; padding: 0;}
+html {
+	height: 100%;
+	background: #3023ae;
+	background: -moz-linear-gradient(-45deg,  #3023ae 0%, #c86dd7 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#3023ae), color-stop(100%,#c86dd7));
+	background: -webkit-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
+	background: -o-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
+	background: -ms-linear-gradient(-45deg,  #3023ae 0%,#c86dd7 100%);
+	background: linear-gradient(135deg,  #3023ae 0%,#c86dd7 100%);
+	background-attachment: fixed;
+}
