@@ -11,3 +11,20 @@ html {
 	background: linear-gradient(135deg,  #3023ae 0%,#c86dd7 100%);
 	background-attachment: fixed;
 }
+
+.ui-image{
+    margin: 200px auto;
+    width: 600px;
+    height: 400px;
+    line-height: 400px;
+    font-size: 5em;
+    text-align: center;
+    color: #ccc;
+    background-color:#fff;
+    border: 4px dashed #ddd;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
