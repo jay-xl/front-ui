@@ -84,3 +84,37 @@ body {
 		transform: scaleY(1);
 	}
 }
+
+/*================== demo2 样式 ==================*/
+#demo2 i{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	display: inline-block;
+	background: #FFF;
+	border-radius: 100%;
+	animation:demo2-loading 1.5s infinite;
+}
+#demo2 i:nth-of-type(1){
+	width: 30px;
+	height: 30px;
+	z-index: 2;
+	/* animation-delay: -1.8s; */
+}
+#demo2 i:nth-of-type(2){
+	width: 60px;
+	height: 60px;
+	opacity: 0.5;
+}
+
+@keyframes demo2-loading{
+	0%,40%,100%{
+		transform: scale(0.4);
+	}
+	20%{
+		transform: scale(1);
+	}
+}
