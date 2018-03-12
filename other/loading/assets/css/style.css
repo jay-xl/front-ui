@@ -57,6 +57,30 @@ body {
 }
 
 /*================== demo1 样式 ==================*/
-#demo1 .text{
-
+#demo1 i{
+	display: inline-block;
+	width: 5px;
+	height: 40px;
+	background-color: #FFF;
+	animation:demo1-loading 1.2s infinite ease-in-out;
+}
+#demo1 i:nth-of-type(2){
+	animation-delay: -1.1s;
+}
+#demo1 i:nth-of-type(3){
+	animation-delay: -1.0s;
+}
+#demo1 i:nth-of-type(4){
+	animation-delay: -0.9s;
+}
+#demo1 i:nth-of-type(5){
+	animation-delay: -0.8s;
+}
+@keyframes demo1-loading{
+	0%,40%,100%{
+		transform: scaleY(0.4);
+	}
+	20%{
+		transform: scaleY(1);
+	}
 }
