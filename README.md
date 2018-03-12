@@ -8,6 +8,7 @@
 # Directory（目录）
 - [Canvas](#canvas)
 - [Components](#components)
+- [Layout](#layout)
 - [Other](#other) 
 
 ### Canvas
@@ -18,6 +19,9 @@
 5. [Hex](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/hex/index.html)
 6. [Fireworks](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/canvas/fireworks/index.html)
 ### Components
+
+### Layout
+1. [Single Page Switch](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/layout/single-page-switch/index.html)
 
 ### Other
 1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
