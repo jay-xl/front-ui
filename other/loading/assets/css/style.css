@@ -36,6 +36,14 @@ body {
 	text-align: center;
 	float: left;
 }
+.absolute-center{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
 /*================== 设置每个 section 的背景颜色 ==================*/
 .container section:nth-of-type(1) {
 	background-color: #1ABC9C;
@@ -87,34 +95,20 @@ body {
 
 /*================== demo2 样式 ==================*/
 #demo2 i{
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
 	display: inline-block;
-	background: #FFF;
+	width: 10em;
+	height: 10em;
+	border: 0.8em solid rgba(225,225,225,0.37);
+	border-left-color: #FFF;
 	border-radius: 100%;
-	animation:demo2-loading 1.5s infinite;
-}
-#demo2 i:nth-of-type(1){
-	width: 30px;
-	height: 30px;
-	z-index: 2;
-	/* animation-delay: -1.8s; */
-}
-#demo2 i:nth-of-type(2){
-	width: 60px;
-	height: 60px;
-	opacity: 0.5;
+	animation:demo2-loading 1.1s infinite linear;
 }
 
 @keyframes demo2-loading{
-	0%,40%,100%{
-		transform: scale(0.4);
+	from{
+		transform: rotate(0deg);
 	}
-	20%{
-		transform: scale(1);
+	to{
+		transform: rotate(360deg);
 	}
 }
