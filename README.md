@@ -33,3 +33,4 @@
 7. [Card Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/card-animation/index.html)
 8. [CSS 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/css3-3d/index.html)
 9. [3D Product Display](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/3d-product-display/index.html)
+10. [Boder Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/border-animation/index.html)
