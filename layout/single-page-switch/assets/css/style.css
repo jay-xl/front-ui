@@ -33,9 +33,11 @@ ul {
     left: 0;
     list-style: none;
     margin: auto;
-    height: 280px;
+    width: 8%;
+    height: 360px;
     text-align: center;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 a.icon {
@@ -59,11 +61,67 @@ a.icon:active {
 
 .page {
     position: absolute;
-    left: -200%;
+    left: 200%;
+    cursor: pointer;
     text-align: center;
+    vertical-align: middle;
+    -webkit-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+    -moz-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+    -o-transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
+    transition: all 0.6s cubic-bezier(0.5, 0.2, 0.2, 1.1);
 }
 
 #p1 {
     left: 0;
-    background-color: darkslateblue;
+    background: darkslateblue;
+}
+
+#p2 {
+    background: tomato;
+}
+
+#p3 {
+    background: gold;
+}
+
+#p4 {
+    background: deeppink;
+}
+
+#p5 {
+    background: #9b59b6;
+}
+
+div#t2:target div#p1,
+div#t3:target div#p1,
+div#t4:target div#p1,
+div#t5:target div#p1 {
+    background: black;
+}
+
+div#t2:target div#p2,
+div#t3:target div#p3,
+div#t4:target div#p4,
+div#t5:target div#p5 {
+    -webkit-transform: translateX(-192%);
+    -moz-transform: translateX(-192%);
+    -o-transform: translate(-192%);
+    transform: translateX(-192%);
+    -webkit-transition: 0.2s !important;
+    -moz-transition-delay: 0.2s !important;
+    -o-transition-delay: 0.2 !important;
+    transition-delay: 0.2s !important;
+}
+
+div#t3:target ul .icon,
+div#t2:target ul .icon,
+div#t4:target ul .icon,
+div#t5:target ul .icon {
+    -webkit-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -o-transform: scale(.6);
+    transform: scale(.6);
+    -webkit-transition-delay: .25s;
+    -o-transition-delay: .25s;
+    transition-delay: .25s;
 }
