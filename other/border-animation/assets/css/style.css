@@ -1,0 +1,89 @@
+body{
+    background: #2c3e50;
+    color: #ecf0f1;
+    font-size: 100%;
+    line-height: 1.25;
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
+}
+section {
+	padding: 4em 2em;
+	text-align: center;
+}
+section h2 {
+	font-weight: 300;
+	font-size: 2em;
+	padding: 1em 0;
+}
+section > div.box {
+	width: 300px;
+	height: 460px;
+	position: relative;
+	background: rgba(255,255,255,1);
+	display: inline-block;
+	margin: 0 10px;
+	cursor: pointer;
+	color: #2c3e50;
+	box-shadow: inset 0 0 0 3px #2c3e50;
+	-webkit-transition: background 0.4s 0.5s;
+	transition: all 0.4s 0.5s;
+}
+section > div.box:hover {
+    color: #ecf0f1;
+    background: rgba(225,225,225,0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s
+}
+section > div.box h3 {
+	font-family: "Ruthie", cursive;
+	font-size: 180px;
+	line-height: 460px;
+	margin: 0;
+	font-weight: 400;
+	width: 100%;
+}
+
+/*========== SVG Border Animation ==========*/
+
+section#svg-border > div.box svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+section#svg-border > div.box svg > line{
+    stroke-width: 5;
+    stroke: #ecf0f1;
+    fill: none;
+    -webkit-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+section#svg-border > div.box:hover svg > line{
+    -webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+section#svg-border > div.box svg > line.top,
+section#svg-border > div.box svg > line.bottom{
+    stroke-dasharray: 330 240; 
+}
+section#svg-border > div.box svg > line.left,
+section#svg-border > div.box svg > line.right{
+    stroke-dasharray: 490 400; 
+}
+section#svg-border > div.box:hover svg line.top{
+    -webkit-transform: translateX(-600px);
+    transform: translateX(-600px);
+}
+section#svg-border > div.box:hover svg line.bottom{
+    -webkit-transform: translateX(600px);
+    transform: translateX(600px);
+}
+section#svg-border > div.box:hover svg line.left{
+    -webkit-transform: translateY(920px);
+    transform: translateY(920px);
+}
+section#svg-border > div.box:hover svg line.right{
+    -webkit-transform: translateY(-920px);
+    transform: translateY(-920px);
+}
+
+
+/*========== SVG Border Animation ==========*/
