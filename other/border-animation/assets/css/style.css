@@ -85,5 +85,16 @@ section#svg-border > div.box:hover svg line.right{
     transform: translateY(-920px);
 }
 
+/******** svg-demo2 ********/
+section#svg-border> div#svg-demo2.box:hover{
+    color:#fe6f83;
+}
+section#svg-border> div#svg-demo2.box:hover svg line{
+    stroke-width: 8;
+    stroke: #fe6f83;
+}
+
+/******** svg-demo3 ********/
+
 
 /*========== SVG Border Animation ==========*/
