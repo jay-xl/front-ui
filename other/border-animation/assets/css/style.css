@@ -95,6 +95,37 @@ section#svg-border> div#svg-demo2.box:hover svg line{
 }
 
 /******** svg-demo3 ********/
-
+section#svg-border> div#svg-demo3.box{
+    background: transparent;
+    color: #ecf0f1;
+}
+section#svg-border> div#svg-demo3.box:hover{
+    background:rgba(0, 0, 0, 0.4);
+}
+section#svg-border > div#svg-demo3 svg line{
+    -webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+section#svg-border > div#svg-demo3.box:hover svg line{
+    stroke-width: 10;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+section#svg-border > div#svg-demo3.box:hover svg line.top{
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+}
+section#svg-border > div#svg-demo3.box:hover svg line.bottom{
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+}
+section#svg-border > div#svg-demo3.box:hover svg line.left{
+    -webkit-transform: translateY(460px);
+    transform: translateY(460px);
+}
+section#svg-border > div#svg-demo3.box:hover svg line.right{
+    -webkit-transform: translateY(-460px);
+    transform: translateY(-460px);
+}
 
 /*========== SVG Border Animation ==========*/
