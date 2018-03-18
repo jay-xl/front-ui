@@ -128,4 +128,56 @@ section#svg-border > div#svg-demo3.box:hover svg line.right{
     transform: translateY(-460px);
 }
 
+/******** svg-demo4 ********/
+section#svg-border> div#svg-demo4.box{
+    background: rgba(0, 0, 0, 0.4);
+    color: #ecf0f1;
+    -webkit-transition: none;
+	transition: none;
+}
+section#svg-border> div#svg-demo4.box h3{
+    -webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+section#svg-border> div#svg-demo4.box:hover h3{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+section#svg-border > div#svg-demo4.box svg line{
+    stroke-width: 30;
+    -webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+section#svg-border > div#svg-demo4.box:hover svg line{
+    stroke-width: 0;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+section#svg-border > div#svg-demo4.box svg > line.top,
+section#svg-border > div#svg-demo4.box svg > line.bottom{
+    stroke-dasharray: 300; 
+}
+section#svg-border > div#svg-demo4.box svg > line.left,
+section#svg-border > div#svg-demo4.box svg > line.right{
+    stroke-dasharray: 460; 
+}
+section#svg-border > div#svg-demo4.box:hover svg line.top{
+    -webkit-transform: translateX(-300px);
+    transform: translateX(-300px);
+}
+section#svg-border > div#svg-demo4.box:hover svg line.bottom{
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+}
+section#svg-border > div#svg-demo4.box:hover svg line.left{
+    -webkit-transform: translateY(460px);
+    transform: translateY(460px);
+}
+section#svg-border > div#svg-demo4.box:hover svg line.right{
+    -webkit-transform: translateY(-460px);
+    transform: translateY(-460px);
+}
+
 /*========== SVG Border Animation ==========*/
