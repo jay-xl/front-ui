@@ -22,15 +22,15 @@
 
 ### Layout
 1. [Single Page Switch](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/layout/single-page-switch/index.html)
+2. [Responsive Layout](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/layout/responsive-layout/index.html)
 
 ### Other
 1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
 2. [Take a photo](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/take-a-photo/index.html)
-3. [Responsive Layout](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/responsive-layout/index.html)
-4. [Hamburger Menus](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/hamburger-menus/index.html)
-5. [Loading](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/loading/index.html)
-6. [The Olympic Rings](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/the-olympic-rings/index.html)
-7. [Card Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/card-animation/index.html)
-8. [CSS 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/css3-3d/index.html)
-9. [3D Product Display](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/3d-product-display/index.html)
-10. [Boder Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/border-animation/index.html)
+3. [Hamburger Menus](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/hamburger-menus/index.html)
+4. [Loading](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/loading/index.html)
+5. [The Olympic Rings](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/the-olympic-rings/index.html)
+6. [Card Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/card-animation/index.html)
+7. [CSS 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/css3-3d/index.html)
+8. [3D Product Display](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/3d-product-display/index.html)
+9. [Boder Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/border-animation/index.html)
