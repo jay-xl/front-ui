@@ -23,6 +23,7 @@
 ### Layout
 1. [Single Page Switch](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/layout/single-page-switch/index.html)
 2. [Responsive Layout](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/layout/responsive-layout/index.html)
+3. [Phone Menu](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/layout/phone-menu/index.html)
 
 ### Other
 1. [Emoji](https://htmlpreview.github.io/?https://github.com/SilenceHVK/FrontUI/blob/master/other/emoji/index.html)
