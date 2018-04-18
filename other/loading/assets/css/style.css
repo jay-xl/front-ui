@@ -112,3 +112,51 @@ body {
 		transform: rotate(360deg);
 	}
 }
+
+/*================== demo3 样式 ==================*/
+#demo3 i{
+	position: relative;
+	top: 22%;
+	display: inline-block;
+	width: 10em;
+	height: 10em;
+	border: 3px solid transparent;
+	border-top-color: #2B8B90;
+	border-radius: 50%;
+	animation:demo2-loading 2s infinite linear;
+}
+
+#demo3 i::before{
+	content: '';
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	left: 5px;
+	bottom: 5px;
+	border: 3px solid transparent;
+	border-top-color: #356F66;
+	border-radius: 50%;
+	animation:demo2-loading 2.5s infinite linear;
+}
+
+#demo3 i::after{
+	content: '';
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	left: 15px;
+	bottom: 15px;
+	border: 3px solid transparent;
+	border-top-color: #92E0D4;
+	border-radius: 50%;
+	animation:demo2-loading 3s infinite linear;
+}
+
+@keyframes demo3-loading{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
