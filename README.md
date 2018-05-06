@@ -35,3 +35,4 @@
 7. [CSS 3D](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/css3-3d/index.html)
 8. [3D Product Display](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/3d-product-display/index.html)
 9. [Boder Animation](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/border-animation/index.html)
+10. [Magnifying Glass](https://htmlpreview.github.io/?https://github.com/SilenceHVK/front-ui/blob/master/other/magnifying-glass/index.html)
