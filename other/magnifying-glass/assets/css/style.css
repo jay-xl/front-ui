@@ -12,14 +12,17 @@
     width: 500px ;
     height: 400px;
     border: 1px solid #ccc;
+    z-index: 1;
 }
-#samll-image img{
+#samll-image img,#big-image img{
     width: inherit;
     height: inherit;
     outline: none;
 }
-.float-box::after{
+
+#float-box{
     content: '';
+    display: none;
     position: absolute;
     width: 150px;
     height: 100px;
@@ -28,4 +31,22 @@
     filter: alpha(opacity=50);
     opacity: 0.5;
     cursor: move;
+}
+
+#big-image{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 535px;
+    width: 800px ;
+    height: 700px;
+    background: red;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#big-image img{
+    position: absolute;
+    z-index: 5;
 }
